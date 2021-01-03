@@ -6,12 +6,18 @@ public class Projectile : MonoBehaviour
 {
 
     [SerializeField] float speed=35;
+    [SerializeField] int damage = 25;
+    [SerializeField] float lifetimeSeconds = 3;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        StartCoroutine(LifetimeTimer());
+    }
+
+    IEnumerator LifetimeTimer()
+    {
+        yield return new WaitForSeconds(lifetimeSeconds);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -20,5 +26,14 @@ public class Projectile : MonoBehaviour
         Vector2 normalizedDeltaPos = speed * Time.deltaTime * Vector3.up;
         transform.Translate(normalizedDeltaPos);
             
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var healthComponent = collision.gameObject.GetComponent<HealthObject>();
+        if (healthComponent)
+        {
+            healthComponent.Damage(damage);
+        }
+        Destroy(gameObject);
     }
 }
