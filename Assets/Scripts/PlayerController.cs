@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 m_movementInput;
     private Vector2 m_mouseLocation;
     private bool m_isShootButtonPressed = false;
+    Weapon weapon;
 
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,20 @@ public class PlayerController : MonoBehaviour
     {
         if(isShootButtonPressed)
         {
-           var bullet= Instantiate(basicBullet, m_controlledBody.position, transform.rotation);
+            if (weapon == null)
+            {
+                var bullet = Instantiate(basicBullet, m_controlledBody.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(weapon.Visual, m_controlledBody.position, transform.rotation);
+            }
             m_isShootButtonPressed = false;
         }
+    }
+
+    public void GrantWeapon(Weapon item)//TODO: should be more general
+    {
+        weapon = item;
     }
 }
