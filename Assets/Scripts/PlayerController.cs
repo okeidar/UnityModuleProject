@@ -11,12 +11,16 @@ public class PlayerController : MonoBehaviour
     private Vector2 m_movementInput;
     private Vector2 m_mouseLocation;
     private bool m_isShootButtonPressed = false;
+    private bool m_isScanButtonPressed = false;
+    private bool m_isDeployButtonPressed = false;
+    private Scanner m_Scanner;
     Weapon weapon;
 
     // Start is called before the first frame update
     void Start()
     {
         m_controlledBody = GetComponent<Rigidbody2D>();
+        m_Scanner = new Scanner(gameObject.transform);
     }
 
     // Update is called once per frame
@@ -26,8 +30,8 @@ public class PlayerController : MonoBehaviour
         RotatePlayer(m_mouseLocation);
         Move(m_movementInput);
         Shoot(m_isShootButtonPressed);
-
-
+        Scan(m_isScanButtonPressed);
+        DeployScan(m_isDeployButtonPressed);
     }
 
     private void GetPlayerInput()
@@ -35,6 +39,8 @@ public class PlayerController : MonoBehaviour
         m_movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         m_mouseLocation =Camera.main.ScreenToWorldPoint( Input.mousePosition);
         m_isShootButtonPressed = Input.GetButtonDown("Fire1");
+        m_isScanButtonPressed = Input.GetButtonDown("Fire2");
+        m_isDeployButtonPressed = Input.GetButtonDown("Fire3");
     }
 
     void Move(Vector2 movement) //TODO:should be in a movement interface
@@ -67,6 +73,22 @@ public class PlayerController : MonoBehaviour
                 Instantiate(weapon.Visual, m_controlledBody.position, transform.rotation);
             }
             m_isShootButtonPressed = false;
+        }
+    }
+
+    void Scan(bool isScanPressed)
+    {
+        if (isScanPressed)
+        {
+            m_Scanner.Scan();
+        }
+    }
+
+    void DeployScan(bool isDeployedPressed)
+    {
+        if (isDeployedPressed)
+        {
+            m_Scanner.Deploy();
         }
     }
 
