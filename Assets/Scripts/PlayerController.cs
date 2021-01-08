@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool m_isDeployButtonPressed = false;
     private Scanner m_Scanner;
     Weapon weapon;
+    private int ammo = 0; //TODO: where to handle?
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +71,13 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                Instantiate(weapon.Visual, m_controlledBody.position, transform.rotation);
+                Instantiate(weapon.bulletPrefab, m_controlledBody.position, transform.rotation);
+                ammo--;
+
+                if(ammo<=0)
+                {
+                    weapon = null;
+                }
             }
             m_isShootButtonPressed = false;
         }
@@ -95,5 +102,6 @@ public class PlayerController : MonoBehaviour
     public void GrantWeapon(Weapon item)//TODO: should be more general
     {
         weapon = item;
+        ammo = item.ammo;
     }
 }

@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02c83e1cd45f9ac41a991ce1341360b3, type: 3}
-  m_Name: DemoWeapon
+  m_Name: demoWeapon
   m_EditorClassIdentifier: 
-  Name: BlaBla
-  Damage: 50
-  Visual: {fileID: 21300000, guid: 4c8e8a779cdce3342bb2dbff8bfc44d0, type: 3}
+  bulletPrefab: {fileID: 1689142726591719894, guid: 61247004e6c7ec948811528403754231, type: 3}
+  ammo: 10
