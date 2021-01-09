@@ -5,37 +5,50 @@ using UnityEngine;
 public class Scanner : MonoBehaviour
 {
     private ScannableObject m_ScannedObject;
-    [SerializeField] Transform m_ScanerTransform;
-    [SerializeField] float m_ScanDistance = 2f;
+    private Scannable m_ObectToScanInRange;
+
+    [SerializeField] float m_DeployDistance = 2f;
 
  
-
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        var scannable = other.GetComponent<Scannable>();
+        if(scannable)
+        {
+            m_ObectToScanInRange = scannable;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other) 
+    {
+        var scannable = other.GetComponent<Scannable>();
+        if(scannable == m_ObectToScanInRange)
+        {
+            m_ObectToScanInRange = null;
+        }
+    }
     public void Scan()
     {
-        var hit = Physics2D.Raycast(m_ScanerTransform.position, m_ScanerTransform.up, m_ScanDistance, ~(LayerMask.GetMask("Player")));
-       
-        if (hit.collider == null)
-        {
-            Debug.Log("No Object Found");
-            return;
-        }
-
-        var objecHit = hit.transform.gameObject;
-        var scannableObject = objecHit.GetComponent<IScanable>();
-        if (scannableObject != null)
+      if (m_ObectToScanInRange)
         {
             Debug.Log("Scanable Object Found!");
-            m_ScannedObject = scannableObject.Scanning();
+            m_ScannedObject = m_ObectToScanInRange.Scanning();
+            // TODO if Pickable set pickable.shouldDestroyOnPickup = true;
+            /*
+            var pickable = m_ScannedObject.grantedObjectPrefab.GetComponent<Pickable>();
+            if(pickable)
+            {
+                pickable.shouldDestroyOnPickup = true;
+            }
+            */
         }
     }
 
-    public IScanable Deploy()
+    public void Deploy()
     {
-        Debug.Log("Deploy Obj");
-        Instantiate(m_ScannedObject.grantedObjectPrefab, transform.position + transform.up * m_ScanDistance,Quaternion.identity);
-        //instanciate Object from m_ScannedObject.Deploy()
-        return null;
+        if(m_ScannedObject)
+        {
+            Debug.Log("Deploy Obj");
+            Instantiate(m_ScannedObject.grantedObjectPrefab, transform.position + transform.up * m_DeployDistance, Quaternion.identity);
+        }
     }
-
-
 }

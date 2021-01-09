@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c83e1cd45f9ac41a991ce1341360b3, type: 3}
-  m_Name: DemoWeapon
+  m_Script: {fileID: 11500000, guid: e950db02b5c69e64daafd4e2f23b34df, type: 3}
+  m_Name: ChestPickable
   m_EditorClassIdentifier: 
-  shouldDestroyOnPickup: 1
-  bulletPrefab: {fileID: 1689142726591719894, guid: 61247004e6c7ec948811528403754231, type: 3}
-  ammo: 10
+  shouldDestroyOnPickup: 0
+  KeyId: 222

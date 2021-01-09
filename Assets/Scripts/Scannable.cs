@@ -1,18 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour, IScanable
+public class Scannable : MonoBehaviour
 {
     [SerializeField] ScannableObject grantedObect;
 
     public void Deploy()
     {
-        Debug.Log("Ball Deployed");
+        Debug.Log("ScannableObject Deployed");
     }
     public ScannableObject Scanning()
     {
-        Debug.Log("Ball Scanned");
+        Debug.Log("ScannableObject Scanned");
         return grantedObect;
     }
 }

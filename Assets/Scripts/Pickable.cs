@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IScanable
+public class Pickable: ScriptableObject
 {
-
-    void Deploy();
-    ScannableObject Scanning();
+   public bool shouldDestroyOnPickup;
 }

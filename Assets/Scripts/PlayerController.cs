@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float playerSpeed;
     [SerializeField] GameObject basicBullet;
+    [SerializeField] private Scanner m_Scanner;
 
     private Rigidbody2D m_controlledBody;
     private Vector2 m_movementInput;
@@ -13,15 +14,14 @@ public class PlayerController : MonoBehaviour
     private bool m_isShootButtonPressed = false;
     private bool m_isScanButtonPressed = false;
     private bool m_isDeployButtonPressed = false;
-    private Scanner m_Scanner;
     Weapon weapon;
+    private Pickable m_objectInHand;
     private int ammo = 0; //TODO: where to handle?
 
     // Start is called before the first frame update
     void Start()
     {
         m_controlledBody = GetComponent<Rigidbody2D>();
-        m_Scanner = GetComponent<Scanner>();
     }
 
     // Update is called once per frame
@@ -96,9 +96,36 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GrantWeapon(Weapon item)//TODO: should be more general
+    private void UpdateObjectInHand()
     {
-        weapon = item;
-        ammo = item.ammo;
+        if (m_objectInHand is Weapon)
+        {
+            weapon = (Weapon)m_objectInHand;
+            ammo = weapon.ammo;
+        }
+    }
+
+    private void DropObjectInHand()
+    {
+        if(m_objectInHand is Weapon)
+        {
+            weapon = null;
+            ammo = 0;
+        }
+    }
+
+    public void TakeItem(Pickable item)
+    {
+        if(m_objectInHand != null)
+        {
+            DropObjectInHand();
+        }
+        m_objectInHand = item;
+        UpdateObjectInHand();
+    }
+
+    public Pickable GetObjectInHand()
+    {
+        return m_objectInHand;
     }
 }
