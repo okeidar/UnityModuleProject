@@ -18,9 +18,9 @@ TagManager:
   - Hazards
   - Environment
   - Pickup
-  - 
-  - 
-  - 
+  - Obstacle
+  - EnemyBullet
+  - Enemy
   - 
   - 
   - 
