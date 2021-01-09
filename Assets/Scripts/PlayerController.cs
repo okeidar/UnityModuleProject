@@ -53,11 +53,8 @@ public class PlayerController : MonoBehaviour
     void RotatePlayer(Vector2 direction)//TODO:should be in a movement interface
     {
         Vector3 lookAt = direction - m_controlledBody.position;
-        float currentAngle = m_controlledBody.rotation;
         float targetAngle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90f;
-        float angleDiff = targetAngle - currentAngle;
-        angleDiff = Mathf.Repeat(angleDiff + 180f, 360f) - 180f;
-        targetAngle = currentAngle + angleDiff;
+    
         m_controlledBody.MoveRotation( targetAngle);
     }
 

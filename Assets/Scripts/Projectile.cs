@@ -5,12 +5,23 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    [SerializeField] float speed=35;
+    [SerializeField] float speed = 35;
     [SerializeField] int damage = 25;
     [SerializeField] float lifetimeSeconds = 3;
 
+
+
     private void Start()
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (!rb)
+        {
+            Debug.LogError("Projectile must have a rigid body!");
+            Destroy(gameObject);
+        }
+
+        rb.velocity = transform.up * speed;
+
         StartCoroutine(LifetimeTimer());
     }
 
@@ -23,9 +34,8 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 normalizedDeltaPos = speed * Time.deltaTime * Vector3.up;
-        transform.Translate(normalizedDeltaPos);// TODO use rigid body and velocity
-            
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
