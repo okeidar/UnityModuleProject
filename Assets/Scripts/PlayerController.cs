@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         m_controlledBody = GetComponent<Rigidbody2D>();
-        m_Scanner = new Scanner(gameObject.transform);
+        m_Scanner = GetComponent<Scanner>();
     }
 
     // Update is called once per frame
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         {
             if (weapon == null)
             {
-                var bullet = Instantiate(basicBullet, m_controlledBody.position, transform.rotation);
+                var bullet = Instantiate(basicBullet, m_controlledBody.position, transform.rotation);               
             }
             else
             {

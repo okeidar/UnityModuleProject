@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         Vector2 normalizedDeltaPos = speed * Time.deltaTime * Vector3.up;
-        transform.Translate(normalizedDeltaPos);
+        transform.Translate(normalizedDeltaPos);// TODO use rigid body and velocity
             
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour, IScanable
 {
+    [SerializeField] ScannableObject grantedObect;
 
     public void Deploy()
     {
         Debug.Log("Ball Deployed");
     }
-    public void Scanning()
+    public ScannableObject Scanning()
     {
         Debug.Log("Ball Scanned");
+        return grantedObect;
     }
 }

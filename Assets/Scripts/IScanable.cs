@@ -6,5 +6,5 @@ public interface IScanable
 {
 
     void Deploy();
-    void Scanning();
+    ScannableObject Scanning();
 }

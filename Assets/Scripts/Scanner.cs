@@ -2,43 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Scanner
+public class Scanner : MonoBehaviour
 {
-    private IScanable m_ScannedObject;
-    private Transform m_ScanerTransform;
-    private float m_ScanDistance = 2f;
+    private ScannableObject m_ScannedObject;
+    [SerializeField] Transform m_ScanerTransform;
+    [SerializeField] float m_ScanDistance = 2f;
 
-    public Scanner(Transform scanerTransform)
-    {
-        m_ScanerTransform = scanerTransform;
-        
-    }
+ 
 
     public void Scan()
     {
-        var hit = Physics2D.Raycast(m_ScanerTransform.position, m_ScanerTransform.up, m_ScanDistance);
-        
+        var hit = Physics2D.Raycast(m_ScanerTransform.position, m_ScanerTransform.up, m_ScanDistance, ~(LayerMask.GetMask("Player")));
+       
         if (hit.collider == null)
         {
             Debug.Log("No Object Found");
             return;
         }
+
         var objecHit = hit.transform.gameObject;
         var scannableObject = objecHit.GetComponent<IScanable>();
         if (scannableObject != null)
         {
             Debug.Log("Scanable Object Found!");
-            scannableObject.Scanning();
-            m_ScannedObject = scannableObject;
+            m_ScannedObject = scannableObject.Scanning();
         }
     }
-    
+
     public IScanable Deploy()
     {
         Debug.Log("Deploy Obj");
+        Instantiate(m_ScannedObject.grantedObjectPrefab, transform.position + transform.up * m_ScanDistance,Quaternion.identity);
         //instanciate Object from m_ScannedObject.Deploy()
         return null;
     }
 
-    
+
 }
