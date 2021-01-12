@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             if (weapon == null)
             {
+                Debug.Log("shooting");
                 var bullet = Instantiate(basicBullet, m_controlledBody.position, transform.rotation);               
             }
             else

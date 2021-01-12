@@ -48,7 +48,13 @@ public class Scanner : MonoBehaviour
         if(m_ScannedObject)
         {
             Debug.Log("Deploy Obj");
-            Instantiate(m_ScannedObject.grantedObjectPrefab, transform.position + transform.up * m_DeployDistance, Quaternion.identity);
+            var obj=Instantiate(m_ScannedObject.grantedObjectPrefab, transform.position + transform.up * m_DeployDistance, Quaternion.identity);
+            if (obj.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
+            {
+                var collider = obj.GetComponent<Collider2D>();
+                if(collider)
+                     AstarPath.active.UpdateGraphs(collider.bounds);
+            }
         }
     }
 }
