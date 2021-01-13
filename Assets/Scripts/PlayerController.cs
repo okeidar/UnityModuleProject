@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private bool m_isShootButtonPressed = false;
     private bool m_isScanButtonPressed = false;
     private bool m_isDeployButtonPressed = false;
+    private bool m_isDeployButtonReleased = false;
+    private bool m_isDeployButtonHold =false;
     Weapon weapon;
     private Pickable m_objectInHand;
     private int ammo = 0; //TODO: where to handle?
@@ -32,7 +34,7 @@ public class PlayerController : MonoBehaviour
         Move(m_movementInput);
         Shoot(m_isShootButtonPressed);
         Scan(m_isScanButtonPressed);
-        DeployScan(m_isDeployButtonPressed);
+        DeployScan(m_isDeployButtonPressed, m_isDeployButtonReleased, m_isDeployButtonHold);
     }
 
     private void GetPlayerInput()
@@ -42,6 +44,9 @@ public class PlayerController : MonoBehaviour
         m_isShootButtonPressed = Input.GetButtonDown("Fire1");
         m_isScanButtonPressed = Input.GetButtonDown("Fire2");
         m_isDeployButtonPressed = Input.GetButtonDown("Fire3");
+        m_isDeployButtonHold = Input.GetButton("Fire3");
+        m_isDeployButtonReleased = Input.GetButtonUp("Fire3");
+    
     }
 
     void Move(Vector2 movement) //TODO:should be in a movement interface
@@ -89,11 +94,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void DeployScan(bool isDeployedPressed)
+    void DeployScan(bool isDeployedPressed, bool isDeployedReleased, bool isDeployPreview)
     {
-        if (isDeployedPressed)
+        if (isDeployedReleased)
         {
             m_Scanner.Deploy();
+        } 
+        else
+        if (isDeployedPressed)
+        {
+            m_Scanner.StartPreview(m_mouseLocation);
+        }
+        if(isDeployPreview)
+        {
+            m_Scanner.UpdatePreview(m_mouseLocation);
         }
     }
 
@@ -117,6 +131,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeItem(Pickable item)
     {
+        Debug.Log($"Player took {item.name}");
         if(m_objectInHand != null)
         {
             DropObjectInHand();

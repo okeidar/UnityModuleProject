@@ -6,9 +6,12 @@ public class Scanner : MonoBehaviour
 {
     private ScannableObject m_ScannedObject;
     private Scannable m_ObectToScanInRange;
-
-    [SerializeField] float m_DeployDistance = 2f;
-
+    private Scannable m_PreviewScanned;
+    [SerializeField] GameObject m_DeployedParent;
+    [SerializeField] float m_MinDeployDistance = 0.5f;
+    [SerializeField] float m_MaxDeployDistance = 2f;
+    [SerializeField] bool m_ShouldDeployOnMouse = true;
+    private Transform m_MouseTransform;
  
     private void OnTriggerEnter2D(Collider2D other) 
     {
@@ -30,7 +33,6 @@ public class Scanner : MonoBehaviour
     {
       if (m_ObectToScanInRange)
         {
-            Debug.Log("Scanable Object Found!");
             m_ScannedObject = m_ObectToScanInRange.Scanning();
             // TODO if Pickable set pickable.shouldDestroyOnPickup = true;
             /*
@@ -45,16 +47,55 @@ public class Scanner : MonoBehaviour
 
     public void Deploy()
     {
-        if(m_ScannedObject)
+        if(m_ScannedObject && m_PreviewScanned)
         {
-            Debug.Log("Deploy Obj");
-            var obj=Instantiate(m_ScannedObject.grantedObjectPrefab, transform.position + transform.up * m_DeployDistance, Quaternion.identity);
-            if (obj.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
+            if(!m_PreviewScanned.IsDeployable)
             {
-                var collider = obj.GetComponent<Collider2D>();
-                if(collider)
-                     AstarPath.active.UpdateGraphs(collider.bounds);
+                Destroy(m_PreviewScanned.gameObject);
             }
+            else
+            {
+                m_PreviewScanned.gameObject.transform.parent = m_DeployedParent.transform;
+                m_PreviewScanned.Deploy();
+                if (m_PreviewScanned.gameObject.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
+                {
+                    var collider = m_PreviewScanned.gameObject.GetComponent<Collider2D>();
+                    if(collider)
+                        AstarPath.active.UpdateGraphs(collider.bounds);
+                }
+            }
+            m_PreviewScanned = null;
         }
+    }
+
+    public void StartPreview(Vector2 mouseLocation)
+    {
+        if(m_ScannedObject && !m_PreviewScanned)
+        {
+            var objToDeploy = Instantiate(m_ScannedObject.grantedObjectPrefab, GetPreviewPosition(mouseLocation), Quaternion.identity);
+            objToDeploy.transform.parent = m_DeployedParent.transform;
+            m_PreviewScanned = objToDeploy.GetComponent<Scannable>();
+            m_PreviewScanned.OnTryDelpoy();
+        }
+    }
+    
+    public void UpdatePreview(Vector2 mouseLocation)
+    {
+        if(m_PreviewScanned)
+        {
+            m_PreviewScanned.gameObject.transform.position = GetPreviewPosition(mouseLocation);
+            m_PreviewScanned.OnDeployPreview();
+        }
+    }
+
+    private Vector2 GetPreviewPosition(Vector2 mouseLocation)
+    {
+        if(!m_ShouldDeployOnMouse)
+        {
+            return transform.position + transform.up * m_MaxDeployDistance;
+        }
+        var distance = (mouseLocation - new Vector2(transform.position.x, transform.position.y)).sqrMagnitude;
+        distance = Mathf.Clamp(distance, m_MinDeployDistance, m_MaxDeployDistance);
+        return transform.position + transform.up * distance;
     }
 }

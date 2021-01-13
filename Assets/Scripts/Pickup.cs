@@ -12,10 +12,10 @@ public class Pickup : MonoBehaviour
         if (player)
         {
             player.TakeItem(grantedItem);
-        }
-        if(grantedItem.shouldDestroyOnPickup)
-        {
-            Destroy(gameObject);
+            if(grantedItem.shouldDestroyOnPickup)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
