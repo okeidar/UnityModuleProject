@@ -476,7 +476,10 @@ MonoBehaviour:
   m_DeployedParent: {fileID: 499082650}
   m_MinDeployDistance: 0.6
   m_MaxDeployDistance: 2
-  m_ShouldDeployOnMouse: 1
+  m_ShouldDeployOnMouse: 0
+  ScanTime: 0
+  DeployTime: 0
+  DeployChargeTime: 0
 --- !u!212 &270700966
 SpriteRenderer:
   m_ObjectHideFlags: 0

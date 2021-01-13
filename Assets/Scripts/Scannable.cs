@@ -12,6 +12,7 @@ public class Scannable : MonoBehaviour
     private bool m_initialTrigger;
     protected Color m_DeployableColor = new Color(0,225,0,0.5f);
     protected Color m_NotDeployableColor = new Color(250,0,0,0.5f);
+    protected Color m_ScannedColor = new Color(0,0,250,1);
     public bool IsPreview;
     public bool IsDeployable;
 
@@ -21,35 +22,43 @@ public class Scannable : MonoBehaviour
         m_initialColor = m_spriteRenderer.color;
         m_initialTrigger = m_collider.isTrigger;
     }
-    public void OnDeployPreview() 
+    public void OnDeployPreview(float deployCompletedState) 
     {
         IsDeployable = GetIsDeployable();
         if(IsPreview)
         {
-            ShowDeployable(IsDeployable);
+            ShowDeployable(IsDeployable, deployCompletedState);
         }
     }
     protected virtual bool GetIsDeployable()
     {
         return !m_IsColliding;
     }
-    protected virtual void ShowDeployable(bool deployable)
+    protected virtual void ShowDeployable(bool deployable, float deployCompletedState)
     {
-        m_spriteRenderer.color = deployable?m_DeployableColor:m_NotDeployableColor;
-        
-
+        var color = deployable?m_DeployableColor:m_NotDeployableColor;
+        color.a = deployCompletedState;
+        m_spriteRenderer.color = color;
     }
-    public virtual void Deploy()
+    public virtual void OnDeploy()
     {
         IsPreview =false;
         m_collider.isTrigger = m_initialTrigger;
         m_spriteRenderer.color = m_initialColor;
     }
-    public ScannableObject Scanning()
+    public void OnScan(float scanCompletePerc)
+    {
+        m_spriteRenderer.color = Color.Lerp(m_ScannedColor, m_initialColor, scanCompletePerc);
+    }
+    public void OnScanStop()
+    {
+        m_spriteRenderer.color = m_initialColor;
+    }
+    public ScannableObject GetScannedObject()
     {
         return grantedObect;
     }
-    public void OnTryDelpoy()
+    public void OnPreviewStart()
     {
         IsPreview =true;
         m_collider.isTrigger = true;

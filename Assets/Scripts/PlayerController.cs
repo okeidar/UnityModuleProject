@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 m_movementInput;
     private Vector2 m_mouseLocation;
     private bool m_isShootButtonPressed = false;
-    private bool m_isScanButtonPressed = false;
+    private bool m_isScanButtonHold = false;
+    private bool m_isScanButtonRelease = false;
     private bool m_isDeployButtonPressed = false;
     private bool m_isDeployButtonReleased = false;
     private bool m_isDeployButtonHold =false;
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
         RotatePlayer(m_mouseLocation);
         Move(m_movementInput);
         Shoot(m_isShootButtonPressed);
-        Scan(m_isScanButtonPressed);
+        Scan(m_isScanButtonHold, m_isScanButtonRelease);
         DeployScan(m_isDeployButtonPressed, m_isDeployButtonReleased, m_isDeployButtonHold);
     }
 
@@ -42,7 +43,8 @@ public class PlayerController : MonoBehaviour
         m_movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         m_mouseLocation =Camera.main.ScreenToWorldPoint( Input.mousePosition);
         m_isShootButtonPressed = Input.GetButtonDown("Fire1");
-        m_isScanButtonPressed = Input.GetButtonDown("Fire2");
+        m_isScanButtonHold = Input.GetButton("Fire2");
+        m_isScanButtonRelease = Input.GetButtonUp("Fire2");
         m_isDeployButtonPressed = Input.GetButtonDown("Fire3");
         m_isDeployButtonHold = Input.GetButton("Fire3");
         m_isDeployButtonReleased = Input.GetButtonUp("Fire3");
@@ -86,11 +88,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Scan(bool isScanPressed)
+    void Scan(bool isScanHeld, bool isScanReleased)
     {
-        if (isScanPressed)
+        if (isScanHeld)
         {
             m_Scanner.Scan();
+        } 
+        if(isScanReleased)
+        {
+            m_Scanner.StopScan();
         }
     }
 

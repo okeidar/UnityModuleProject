@@ -11,14 +11,26 @@ public class Scanner : MonoBehaviour
     [SerializeField] float m_MinDeployDistance = 0.5f;
     [SerializeField] float m_MaxDeployDistance = 2f;
     [SerializeField] bool m_ShouldDeployOnMouse = true;
+    [SerializeField] private float ScanTime = 1f;
+    [SerializeField] private float DeployTime = 2f;
+    [SerializeField] private float DeployChargeTime = 2f;
+    private float m_timeLeftToScan;
+    private float m_timeLeftToDeploy;
+    private float m_ChargeTimeEnd;
+
+
     private Transform m_MouseTransform;
  
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerStay2D(Collider2D other) 
     {
-        var scannable = other.GetComponent<Scannable>();
-        if(scannable)
+        if(!m_ObectToScanInRange)
         {
-            m_ObectToScanInRange = scannable;
+            var scannable = other.GetComponent<Scannable>();
+            if(scannable)
+            {
+                m_ObectToScanInRange = scannable;
+                m_timeLeftToScan = ScanTime;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other) 
@@ -26,37 +38,53 @@ public class Scanner : MonoBehaviour
         var scannable = other.GetComponent<Scannable>();
         if(scannable == m_ObectToScanInRange)
         {
+            m_ObectToScanInRange.OnScanStop();
             m_ObectToScanInRange = null;
+        }
+    }
+    public void StopScan()
+    {
+        if(m_ObectToScanInRange)
+        {
+            m_timeLeftToScan = ScanTime;
+            m_ObectToScanInRange.OnScanStop();
         }
     }
     public void Scan()
     {
-      if (m_ObectToScanInRange)
+        if (m_ObectToScanInRange)
         {
-            m_ScannedObject = m_ObectToScanInRange.Scanning();
-            // TODO if Pickable set pickable.shouldDestroyOnPickup = true;
-            /*
-            var pickable = m_ScannedObject.grantedObjectPrefab.GetComponent<Pickable>();
-            if(pickable)
+            //continue scanning
+            if(m_timeLeftToScan > 0)
             {
-                pickable.shouldDestroyOnPickup = true;
+                var scanCompletePerc = ScanTime > 0 ? (ScanTime- m_timeLeftToScan)/ScanTime : 1;
+                m_ObectToScanInRange.OnScan(scanCompletePerc);
+                m_timeLeftToScan -= Time.deltaTime;
             }
-            */
+            //finish scanning
+            else
+            {
+                m_ObectToScanInRange.OnScanStop();
+                m_ScannedObject = m_ObectToScanInRange.GetScannedObject();
+            }
         }
     }
 
     public void Deploy()
     {
-        if(m_ScannedObject && m_PreviewScanned)
+        if(m_PreviewScanned)
         {
-            if(!m_PreviewScanned.IsDeployable)
+            //wont deploy
+            if(!m_PreviewScanned.IsDeployable || m_timeLeftToDeploy > 0)
             {
                 Destroy(m_PreviewScanned.gameObject);
             }
+            //deploy
             else
             {
                 m_PreviewScanned.gameObject.transform.parent = m_DeployedParent.transform;
-                m_PreviewScanned.Deploy();
+                m_PreviewScanned.OnDeploy();
+                m_ChargeTimeEnd = Time.time + DeployChargeTime;
                 if (m_PreviewScanned.gameObject.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
                 {
                     var collider = m_PreviewScanned.gameObject.GetComponent<Collider2D>();
@@ -70,12 +98,14 @@ public class Scanner : MonoBehaviour
 
     public void StartPreview(Vector2 mouseLocation)
     {
-        if(m_ScannedObject && !m_PreviewScanned)
+        if(m_ScannedObject && !m_PreviewScanned && m_ChargeTimeEnd < Time.time)
         {
             var objToDeploy = Instantiate(m_ScannedObject.grantedObjectPrefab, GetPreviewPosition(mouseLocation), Quaternion.identity);
             objToDeploy.transform.parent = m_DeployedParent.transform;
             m_PreviewScanned = objToDeploy.GetComponent<Scannable>();
-            m_PreviewScanned.OnTryDelpoy();
+            m_PreviewScanned.OnPreviewStart();
+            m_timeLeftToDeploy = DeployTime;
+            Debug.Log("startPreview");
         }
     }
     
@@ -83,8 +113,14 @@ public class Scanner : MonoBehaviour
     {
         if(m_PreviewScanned)
         {
+            if(m_timeLeftToDeploy > 0)
+            {
+                m_timeLeftToDeploy -= Time.deltaTime;
+                m_timeLeftToDeploy = Mathf.Max(m_timeLeftToDeploy, 0);
+            }
+            var deployCompletePerc = DeployTime > 0 ? (DeployTime- m_timeLeftToDeploy)/DeployTime : 1;
             m_PreviewScanned.gameObject.transform.position = GetPreviewPosition(mouseLocation);
-            m_PreviewScanned.OnDeployPreview();
+            m_PreviewScanned.OnDeployPreview(deployCompletePerc);
         }
     }
 
