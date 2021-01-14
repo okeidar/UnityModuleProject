@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Pickable: ScriptableObject
 {
-   public bool shouldDestroyOnPickup;
+   public bool shouldDestroyOnPickup;//TODO: this should be in the pickup script.
 }
