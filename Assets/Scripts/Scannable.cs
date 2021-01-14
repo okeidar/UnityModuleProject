@@ -10,22 +10,23 @@ public class Scannable : MonoBehaviour
     protected bool m_IsColliding;
     private Color m_initialColor;
     private bool m_initialTrigger;
-    protected Color m_DeployableColor = new Color(0,225,0,0.5f);
-    protected Color m_NotDeployableColor = new Color(250,0,0,0.5f);
-    protected Color m_ScannedColor = new Color(0,0,250,1);
+    protected Color m_DeployableColor = new Color(0, 225, 0, 0.5f);
+    protected Color m_NotDeployableColor = new Color(250, 0, 0, 0.5f);
+    protected Color m_ScannedColor = new Color(0, 0, 250, 1);
     public bool IsPreview;
     public bool IsDeployable;
 
-    protected virtual void Awake() {
+    protected virtual void Awake()
+    {
         m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         m_collider = gameObject.GetComponent<Collider2D>();
         m_initialColor = m_spriteRenderer.color;
         m_initialTrigger = m_collider.isTrigger;
     }
-    public void OnDeployPreview(float deployCompletedState) 
+    public void OnDeployPreview(float deployCompletedState)
     {
         IsDeployable = GetIsDeployable();
-        if(IsPreview)
+        if (IsPreview)
         {
             ShowDeployable(IsDeployable, deployCompletedState);
         }
@@ -36,13 +37,13 @@ public class Scannable : MonoBehaviour
     }
     protected virtual void ShowDeployable(bool deployable, float deployCompletedState)
     {
-        var color = deployable?m_DeployableColor:m_NotDeployableColor;
+        var color = deployable ? m_DeployableColor : m_NotDeployableColor;
         color.a = deployCompletedState;
         m_spriteRenderer.color = color;
     }
     public virtual void OnDeploy()
     {
-        IsPreview =false;
+        IsPreview = false;
         m_collider.isTrigger = m_initialTrigger;
         m_spriteRenderer.color = m_initialColor;
     }
@@ -60,13 +61,14 @@ public class Scannable : MonoBehaviour
     }
     public void OnPreviewStart()
     {
-        IsPreview =true;
+        IsPreview = true;
         m_collider.isTrigger = true;
     }
-    private void OnTriggerStay2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other)
+    {
         m_IsColliding = other.gameObject != null;
     }
-    private void OnTriggerExit2D(Collider2D other) 
+    private void OnTriggerExit2D(Collider2D other)
     {
         m_IsColliding = false;
     }

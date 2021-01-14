@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] float speed = 7f;
     [SerializeField] float nextWaypointDistance = .3f;
+    [SerializeField] LayerMask myLayerMask;
 
     Path m_path;
     int m_currentWaypoint = 0;
@@ -48,10 +49,20 @@ public class EnemyAI : MonoBehaviour
     {
         if (Vector2.Distance(m_controlledEnemy.position, target.position) <= m_shooter.Range) //TODO: use LOS to move around obstacles
         {
-            StopMoving();
-            RotateEnemy(((Vector2)target.position - m_controlledEnemy.position).normalized);
-            m_shooter.ShootAt(target);
-            return;
+            bool hitTarget = false;
+            Vector2 targetDire = ((Vector2)target.position - m_controlledEnemy.position).normalized;
+
+            Debug.DrawRay(m_controlledEnemy.position, targetDire * m_shooter.Range, Color.red);
+            var hit = Physics2D.Raycast(m_controlledEnemy.position, targetDire, m_shooter.Range, myLayerMask);
+            hitTarget = hit.collider?.gameObject == target.gameObject;
+
+            if (hitTarget)
+            {
+                StopMoving();
+                RotateEnemy(targetDire);
+                m_shooter.ShootAt(target);
+                return;
+            }
         }
 
         MoveAimToTarget();
@@ -65,7 +76,7 @@ public class EnemyAI : MonoBehaviour
         if (m_currentWaypoint >= m_path.vectorPath.Count)
         {
             return;
-        }      
+        }
 
         Vector2 direction = ((Vector2)m_path.vectorPath[m_currentWaypoint] - m_controlledEnemy.position).normalized;
         Vector2 movement = direction * speed * Time.deltaTime;
