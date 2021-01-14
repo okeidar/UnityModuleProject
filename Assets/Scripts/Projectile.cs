@@ -45,5 +45,14 @@ public class Projectile : MonoBehaviour
             healthComponent.Damage(damage);
         }
         Destroy(gameObject);
+        // TODO do we want the perview object to block the projectile?
+        /*
+        var scannable = collision.gameObject?.GetComponent<Scannable>();
+        if(!scannable || !scannable.IsPreview)
+        {
+            Destroy(gameObject);
+        }
+        */
+        
     }
 }

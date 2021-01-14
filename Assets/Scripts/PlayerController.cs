@@ -12,8 +12,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 m_movementInput;
     private Vector2 m_mouseLocation;
     private bool m_isShootButtonPressed = false;
-    private bool m_isScanButtonPressed = false;
+    private bool m_isScanButtonHold = false;
+    private bool m_isScanButtonRelease = false;
     private bool m_isDeployButtonPressed = false;
+    private bool m_isDeployButtonReleased = false;
+    private bool m_isDeployButtonHold =false;
     Weapon weapon;
     private Pickable m_objectInHand;
     private int ammo = 0; //TODO: where to handle?
@@ -31,8 +34,8 @@ public class PlayerController : MonoBehaviour
         RotatePlayer(m_mouseLocation);
         Move(m_movementInput);
         Shoot(m_isShootButtonPressed);
-        Scan(m_isScanButtonPressed);
-        DeployScan(m_isDeployButtonPressed);
+        Scan(m_isScanButtonHold, m_isScanButtonRelease);
+        DeployScan(m_isDeployButtonPressed, m_isDeployButtonReleased, m_isDeployButtonHold);
     }
 
     private void GetPlayerInput()
@@ -40,8 +43,12 @@ public class PlayerController : MonoBehaviour
         m_movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         m_mouseLocation =Camera.main.ScreenToWorldPoint( Input.mousePosition);
         m_isShootButtonPressed = Input.GetButtonDown("Fire1");
-        m_isScanButtonPressed = Input.GetButtonDown("Fire2");
+        m_isScanButtonHold = Input.GetButton("Fire2");
+        m_isScanButtonRelease = Input.GetButtonUp("Fire2");
         m_isDeployButtonPressed = Input.GetButtonDown("Fire3");
+        m_isDeployButtonHold = Input.GetButton("Fire3");
+        m_isDeployButtonReleased = Input.GetButtonUp("Fire3");
+    
     }
 
     void Move(Vector2 movement) //TODO:should be in a movement interface
@@ -80,19 +87,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Scan(bool isScanPressed)
+    void Scan(bool isScanHeld, bool isScanReleased)
     {
-        if (isScanPressed)
+        if (isScanHeld)
         {
             m_Scanner.Scan();
+        } 
+        if(isScanReleased)
+        {
+            m_Scanner.StopScan();
         }
     }
 
-    void DeployScan(bool isDeployedPressed)
+    void DeployScan(bool isDeployedPressed, bool isDeployedReleased, bool isDeployPreview)
     {
-        if (isDeployedPressed)
+        if (isDeployedReleased)
         {
             m_Scanner.Deploy();
+        } 
+        else
+        if (isDeployedPressed)
+        {
+            m_Scanner.StartPreview(m_mouseLocation);
+        }
+        if(isDeployPreview)
+        {
+            m_Scanner.UpdatePreview(m_mouseLocation);
         }
     }
 
@@ -116,6 +136,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeItem(Pickable item)
     {
+        Debug.Log($"Player took {item.name}");
         if(m_objectInHand != null)
         {
             DropObjectInHand();
