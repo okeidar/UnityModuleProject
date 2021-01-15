@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: KeyPickable
   m_EditorClassIdentifier: 
   shouldDestroyOnPickup: 1
+  Icon: {fileID: -778764822399169897, guid: bfac94ed2d70ad24fa31a75b2ca6085e, type: 3}
   KeyId: 222

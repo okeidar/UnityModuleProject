@@ -7,7 +7,6 @@ public class Scanner : MonoBehaviour
     private ScannableObject m_ScannedObject;
     private Scannable m_ObectToScanInRange;
     private Scannable m_PreviewScanned;
-    [SerializeField] GameObject m_DeployedParent;
     [SerializeField] float m_MinDeployDistance = 0.5f;
     [SerializeField] float m_MaxDeployDistance = 2f;
     [SerializeField] bool m_ShouldDeployOnMouse = true;
@@ -36,7 +35,7 @@ public class Scanner : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) 
     {
         var scannable = other.GetComponent<Scannable>();
-        if(scannable == m_ObectToScanInRange)
+        if(m_ObectToScanInRange && scannable == m_ObectToScanInRange)
         {
             m_ObectToScanInRange.OnScanStop();
             m_ObectToScanInRange = null;
@@ -50,7 +49,7 @@ public class Scanner : MonoBehaviour
             m_ObectToScanInRange.OnScanStop();
         }
     }
-    public void Scan()
+    public ScannableObject Scan()
     {
         if (m_ObectToScanInRange)
         {
@@ -66,8 +65,10 @@ public class Scanner : MonoBehaviour
             {
                 m_ObectToScanInRange.OnScanStop();
                 m_ScannedObject = m_ObectToScanInRange.GetScannedObject();
+                return m_ScannedObject;
             }
         }
+        return null;
     }
 
     public void Deploy()
@@ -82,14 +83,15 @@ public class Scanner : MonoBehaviour
             //deploy
             else
             {
-                m_PreviewScanned.gameObject.transform.parent = m_DeployedParent.transform;
                 m_PreviewScanned.OnDeploy();
                 m_ChargeTimeEnd = Time.time + DeployChargeTime;
                 if (m_PreviewScanned.gameObject.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
                 {
                     var collider = m_PreviewScanned.gameObject.GetComponent<Collider2D>();
                     if(collider)
+                    {
                         AstarPath.active.UpdateGraphs(collider.bounds);
+                    }
                 }
             }
             m_PreviewScanned = null;
@@ -101,7 +103,6 @@ public class Scanner : MonoBehaviour
         if(m_ScannedObject && !m_PreviewScanned && m_ChargeTimeEnd < Time.time)
         {
             var objToDeploy = Instantiate(m_ScannedObject.grantedObjectPrefab, GetPreviewPosition(mouseLocation), Quaternion.identity);
-            objToDeploy.transform.parent = m_DeployedParent.transform;
             m_PreviewScanned = objToDeploy.GetComponent<Scannable>();
             m_PreviewScanned.OnPreviewStart();
             m_timeLeftToDeploy = DeployTime;

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: DemoScannable
   m_EditorClassIdentifier: 
   grantedObjectPrefab: {fileID: 3528513436557579240, guid: 5f0a17fddde9b7a45b28a0090195efbb, type: 3}
+  Icon: {fileID: 21300000, guid: dd0fb735aced17d428425430303cd9e7, type: 3}

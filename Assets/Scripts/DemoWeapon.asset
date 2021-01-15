@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DemoWeapon
   m_EditorClassIdentifier: 
   shouldDestroyOnPickup: 1
+  Icon: {fileID: 21300000, guid: 958065e17592f2345949834c1c9cc039, type: 3}
   bulletPrefab: {fileID: 1689142726591719894, guid: 61247004e6c7ec948811528403754231, type: 3}
   ammo: 10

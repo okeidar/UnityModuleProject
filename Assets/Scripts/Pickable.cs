@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Pickable: ScriptableObject
 {
-   public bool shouldDestroyOnPickup;//TODO: this should be in the pickup script.
+   public bool shouldDestroyOnPickup;
+   public Sprite Icon;
 }
