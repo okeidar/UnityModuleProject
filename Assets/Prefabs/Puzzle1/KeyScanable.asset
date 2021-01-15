@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: KeyScanable
   m_EditorClassIdentifier: 
   grantedObjectPrefab: {fileID: 8407496440576886756, guid: aecaebff237230f4183961474368ab6a, type: 3}
+  Icon: {fileID: -778764822399169897, guid: bfac94ed2d70ad24fa31a75b2ca6085e, type: 3}

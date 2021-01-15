@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float playerSpeed;
     [SerializeField] GameObject basicBullet;
     [SerializeField] private Scanner m_Scanner;
+    [SerializeField] private HealthObject m_Health;
 
     private Rigidbody2D m_controlledBody;
     private Vector2 m_movementInput;
@@ -20,11 +21,11 @@ public class PlayerController : MonoBehaviour
     Weapon weapon;
     private Pickable m_objectInHand;
     private int ammo = 0; //TODO: where to handle?
-
     // Start is called before the first frame update
     void Start()
     {
         m_controlledBody = GetComponent<Rigidbody2D>();
+        InitUI();
     }
 
     // Update is called once per frame
@@ -36,6 +37,14 @@ public class PlayerController : MonoBehaviour
         Shoot(m_isShootButtonPressed);
         Scan(m_isScanButtonHold, m_isScanButtonRelease);
         DeployScan(m_isDeployButtonPressed, m_isDeployButtonReleased, m_isDeployButtonHold);
+    }
+
+    private void InitUI()
+    {
+        UIManager.Instance.SetDefaultWeapon();
+        UIManager.Instance.SetLife(m_Health.CurrentHealth);
+        UIManager.Instance.SetItemInHand(null);
+        UIManager.Instance.SetScannedItem(null);
     }
 
     private void GetPlayerInput()
@@ -77,10 +86,11 @@ public class PlayerController : MonoBehaviour
             {
                 Instantiate(weapon.bulletPrefab, m_controlledBody.position, transform.rotation);
                 ammo--;
-
+                UIManager.Instance.SetAmmo(ammo);
                 if(ammo<=0)
                 {
                     weapon = null;
+                    UIManager.Instance.SetDefaultWeapon();
                 }
             }
             m_isShootButtonPressed = false;
@@ -91,7 +101,11 @@ public class PlayerController : MonoBehaviour
     {
         if (isScanHeld)
         {
-            m_Scanner.Scan();
+            var item = m_Scanner.Scan();
+            if(item != null)
+            {
+                UIManager.Instance.SetScannedItem(item.Icon);
+            }
         } 
         if(isScanReleased)
         {
@@ -122,7 +136,9 @@ public class PlayerController : MonoBehaviour
         {
             weapon = (Weapon)m_objectInHand;
             ammo = weapon.ammo;
+            UIManager.Instance.SetNewWeapon(m_objectInHand.Icon, ammo);
         }
+        UIManager.Instance.SetItemInHand(m_objectInHand.Icon);
     }
 
     private void DropObjectInHand()
@@ -131,6 +147,7 @@ public class PlayerController : MonoBehaviour
         {
             weapon = null;
             ammo = 0;
+            UIManager.Instance.SetDefaultWeapon();
         }
     }
 
@@ -148,5 +165,16 @@ public class PlayerController : MonoBehaviour
     public Pickable GetObjectInHand()
     {
         return m_objectInHand;
+    }
+
+    public void UpdateLife(int life)
+    {
+        UIManager.Instance.SetLife(life);
+    }
+
+    public void Kill()
+    {
+        UIManager.Instance.GameOver();
+        Debug.Log("GameOver");
     }
 }

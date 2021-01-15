@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ChestPickable
   m_EditorClassIdentifier: 
   shouldDestroyOnPickup: 0
+  Icon: {fileID: 21300000, guid: 93f78d591d1b80743a928a905cacecb3, type: 3}
   KeyId: 222

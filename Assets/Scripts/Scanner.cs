@@ -7,7 +7,6 @@ public class Scanner : MonoBehaviour
     private ScannableObject m_ScannedObject;
     private Scannable m_ObectToScanInRange;
     private Scannable m_PreviewScanned;
-    [SerializeField] GameObject m_DeployedParent;
     [SerializeField] float m_MinDeployDistance = 0.5f;
     [SerializeField] float m_MaxDeployDistance = 2f;
     [SerializeField] bool m_ShouldDeployOnMouse = true;
@@ -17,10 +16,17 @@ public class Scanner : MonoBehaviour
     private float m_timeLeftToScan;
     private float m_timeLeftToDeploy;
     private float m_ChargeTimeEnd;
+    private Collider2D m_Collider;
+    private SpriteRenderer m_SR;
+    
 
 
     private Transform m_MouseTransform;
- 
+    private void Start()
+    {
+        m_Collider = gameObject.GetComponent<Collider2D>();
+        m_SR = gameObject.GetComponent<SpriteRenderer>();
+    }
     private void OnTriggerStay2D(Collider2D other) 
     {
         if(!m_ObectToScanInRange)
@@ -36,7 +42,7 @@ public class Scanner : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) 
     {
         var scannable = other.GetComponent<Scannable>();
-        if(scannable == m_ObectToScanInRange)
+        if(m_ObectToScanInRange && scannable == m_ObectToScanInRange)
         {
             m_ObectToScanInRange.OnScanStop();
             m_ObectToScanInRange = null;
@@ -44,14 +50,16 @@ public class Scanner : MonoBehaviour
     }
     public void StopScan()
     {
+        ActivateScanner(false);
         if(m_ObectToScanInRange)
         {
             m_timeLeftToScan = ScanTime;
             m_ObectToScanInRange.OnScanStop();
         }
     }
-    public void Scan()
+    public ScannableObject Scan()
     {
+        ActivateScanner(true);
         if (m_ObectToScanInRange)
         {
             //continue scanning
@@ -66,12 +74,15 @@ public class Scanner : MonoBehaviour
             {
                 m_ObectToScanInRange.OnScanStop();
                 m_ScannedObject = m_ObectToScanInRange.GetScannedObject();
+                return m_ScannedObject;
             }
         }
+        return null;
     }
 
     public void Deploy()
     {
+        ActivateScanner(false);
         if(m_PreviewScanned)
         {
             //wont deploy
@@ -82,14 +93,17 @@ public class Scanner : MonoBehaviour
             //deploy
             else
             {
-                m_PreviewScanned.gameObject.transform.parent = m_DeployedParent.transform;
                 m_PreviewScanned.OnDeploy();
+                m_PreviewScanned.gameObject.transform.SetParent(null);
+
                 m_ChargeTimeEnd = Time.time + DeployChargeTime;
                 if (m_PreviewScanned.gameObject.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
                 {
                     var collider = m_PreviewScanned.gameObject.GetComponent<Collider2D>();
                     if(collider)
+                    {
                         AstarPath.active.UpdateGraphs(collider.bounds);
+                    }
                 }
             }
             m_PreviewScanned = null;
@@ -101,8 +115,8 @@ public class Scanner : MonoBehaviour
         if(m_ScannedObject && !m_PreviewScanned && m_ChargeTimeEnd < Time.time)
         {
             var objToDeploy = Instantiate(m_ScannedObject.grantedObjectPrefab, GetPreviewPosition(mouseLocation), Quaternion.identity);
-            objToDeploy.transform.parent = m_DeployedParent.transform;
             m_PreviewScanned = objToDeploy.GetComponent<Scannable>();
+            m_PreviewScanned.gameObject.transform.SetParent(gameObject.transform);
             m_PreviewScanned.OnPreviewStart();
             m_timeLeftToDeploy = DeployTime;
             Debug.Log("startPreview");
@@ -133,5 +147,13 @@ public class Scanner : MonoBehaviour
         var distance = (mouseLocation - new Vector2(transform.position.x, transform.position.y)).sqrMagnitude;
         distance = Mathf.Clamp(distance, m_MinDeployDistance, m_MaxDeployDistance);
         return transform.position + transform.up * distance;
+    }
+    public void ActivateScanner(bool activate)
+    {
+        if(activate != m_Collider.enabled || activate != m_SR.enabled)
+        {
+            m_Collider.enabled = activate;
+            m_SR.enabled = activate;
+        }
     }
 }

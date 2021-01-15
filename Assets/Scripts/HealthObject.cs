@@ -6,6 +6,7 @@ public class HealthObject : MonoBehaviour
 {
 
     [SerializeField] int health=100;
+    private PlayerController m_player;
 
 
     public int CurrentHealth { get ; private set; }
@@ -13,6 +14,7 @@ public class HealthObject : MonoBehaviour
     private void Start()
     {
         CurrentHealth = health;
+        m_player = gameObject.GetComponent<PlayerController>();
     }
 
     public void Damage(int damage)
@@ -21,7 +23,15 @@ public class HealthObject : MonoBehaviour
         Debug.Log(CurrentHealth);
         if (CurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            if(m_player)
+            {
+                m_player?.Kill();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
+        m_player?.UpdateLife(CurrentHealth);
     }
 }
