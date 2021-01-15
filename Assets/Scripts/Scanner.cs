@@ -94,6 +94,8 @@ public class Scanner : MonoBehaviour
             else
             {
                 m_PreviewScanned.OnDeploy();
+                m_PreviewScanned.gameObject.transform.SetParent(null);
+
                 m_ChargeTimeEnd = Time.time + DeployChargeTime;
                 if (m_PreviewScanned.gameObject.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
                 {
@@ -114,6 +116,7 @@ public class Scanner : MonoBehaviour
         {
             var objToDeploy = Instantiate(m_ScannedObject.grantedObjectPrefab, GetPreviewPosition(mouseLocation), Quaternion.identity);
             m_PreviewScanned = objToDeploy.GetComponent<Scannable>();
+            m_PreviewScanned.gameObject.transform.SetParent(gameObject.transform);
             m_PreviewScanned.OnPreviewStart();
             m_timeLeftToDeploy = DeployTime;
             Debug.Log("startPreview");
