@@ -16,10 +16,17 @@ public class Scanner : MonoBehaviour
     private float m_timeLeftToScan;
     private float m_timeLeftToDeploy;
     private float m_ChargeTimeEnd;
+    private Collider2D m_Collider;
+    private SpriteRenderer m_SR;
+    
 
 
     private Transform m_MouseTransform;
- 
+    private void Start()
+    {
+        m_Collider = gameObject.GetComponent<Collider2D>();
+        m_SR = gameObject.GetComponent<SpriteRenderer>();
+    }
     private void OnTriggerStay2D(Collider2D other) 
     {
         if(!m_ObectToScanInRange)
@@ -43,6 +50,7 @@ public class Scanner : MonoBehaviour
     }
     public void StopScan()
     {
+        ActivateScanner(false);
         if(m_ObectToScanInRange)
         {
             m_timeLeftToScan = ScanTime;
@@ -51,6 +59,7 @@ public class Scanner : MonoBehaviour
     }
     public ScannableObject Scan()
     {
+        ActivateScanner(true);
         if (m_ObectToScanInRange)
         {
             //continue scanning
@@ -73,6 +82,7 @@ public class Scanner : MonoBehaviour
 
     public void Deploy()
     {
+        ActivateScanner(false);
         if(m_PreviewScanned)
         {
             //wont deploy
@@ -134,5 +144,13 @@ public class Scanner : MonoBehaviour
         var distance = (mouseLocation - new Vector2(transform.position.x, transform.position.y)).sqrMagnitude;
         distance = Mathf.Clamp(distance, m_MinDeployDistance, m_MaxDeployDistance);
         return transform.position + transform.up * distance;
+    }
+    public void ActivateScanner(bool activate)
+    {
+        if(activate != m_Collider.enabled || activate != m_SR.enabled)
+        {
+            m_Collider.enabled = activate;
+            m_SR.enabled = activate;
+        }
     }
 }

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Puzzle : MonoBehaviour
 {
-    [SerializeField] private KeyObject keyToSolve;
+    [SerializeField] protected KeyObject keyToSolve;
+    [SerializeField] protected Animator m_Anim;
+
     private bool PuzzleSolved;
     
     
@@ -16,7 +18,7 @@ public class Puzzle : MonoBehaviour
             TrySolve(player.GetObjectInHand());
         }
     }
-    public bool TrySolve(Pickable item)
+    public virtual bool TrySolve(Pickable item)
     {
         Debug.Log($"compare: {item.GetType()}");
         PuzzleSolved = item is KeyObject && keyToSolve.KeyId == ((KeyObject)item).KeyId;  
@@ -26,7 +28,7 @@ public class Puzzle : MonoBehaviour
         }
         return PuzzleSolved;
     }
-    private void OnSolve()
+    protected virtual void OnSolve()
     {
         Destroy(gameObject);
     }
