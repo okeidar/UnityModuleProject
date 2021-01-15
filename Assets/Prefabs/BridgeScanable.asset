@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbbda7ee32e4ca54b992f02c02278475, type: 3}
+  m_Name: BridgeScanable
+  m_EditorClassIdentifier: 
+  grantedObjectPrefab: {fileID: 1192568508014432471, guid: 260b58fc011c5ad47973ccea32445176, type: 3}

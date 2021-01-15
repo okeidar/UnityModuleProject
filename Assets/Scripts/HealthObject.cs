@@ -7,18 +7,19 @@ public class HealthObject : MonoBehaviour
 
     [SerializeField] int health=100;
 
-    private int m_currentHealth;
+
+    public int CurrentHealth { get ; private set; }
 
     private void Start()
     {
-        m_currentHealth = health;
+        CurrentHealth = health;
     }
 
     public void Damage(int damage)
     {
-        m_currentHealth -= damage;
-        Debug.Log(m_currentHealth);
-        if (m_currentHealth <= 0)
+        CurrentHealth -= damage;
+        Debug.Log(CurrentHealth);
+        if (CurrentHealth <= 0)
         {
             Destroy(gameObject);
         }

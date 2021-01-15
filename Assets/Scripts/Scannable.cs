@@ -19,6 +19,11 @@ public class Scannable : MonoBehaviour
     protected virtual void Awake()
     {
         m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        if (m_spriteRenderer == null)
+        {
+            m_spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
+        }
+            
         m_collider = gameObject.GetComponent<Collider2D>();
         m_initialColor = m_spriteRenderer.color;
         m_initialTrigger = m_collider.isTrigger;
