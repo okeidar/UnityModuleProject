@@ -5,5 +5,5 @@ using UnityEngine;
 public class KeyItem : MonoBehaviour
 {
     [SerializeField] int keyId;
-    public int KeyID { get; }
+    public int KeyID => keyId;
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class Scannable : MonoBehaviour
 {
     [SerializeField] ScannableObject grantedObect;
+    [SerializeField] LayerMask ignoredLayerMask;
+
     private Collider2D m_collider;
     protected SpriteRenderer m_spriteRenderer;
     protected bool m_IsColliding;
@@ -15,6 +17,7 @@ public class Scannable : MonoBehaviour
     protected Color m_ScannedColor = new Color(0, 0, 250, 1);
     public bool IsPreview;
     public bool IsDeployable;
+    public event System.Action<GameObject> OnDeployed;
 
     protected virtual void Awake()
     {
@@ -51,6 +54,7 @@ public class Scannable : MonoBehaviour
         IsPreview = false;
         m_collider.isTrigger = m_initialTrigger;
         m_spriteRenderer.color = m_initialColor;
+        OnDeployed?.Invoke(gameObject);
     }
     public void OnScan(float scanCompletePerc)
     {
@@ -71,6 +75,10 @@ public class Scannable : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (((1 << other.gameObject.layer) & ignoredLayerMask) != 0)
+        {
+            return;
+        }
         m_IsColliding = other.gameObject != null;
     }
     private void OnTriggerExit2D(Collider2D other)

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8116312481731029989
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1548998910001901814, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: grantedObect
+      value: 
+      objectReference: {fileID: 11400000, guid: 41d326fdad6d21649962dd2bbdfea4e1, type: 2}
+    - target: {fileID: 2146121958126176521, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2562912776319624125, guid: 2d2f0bdd4b10f6f429949b21d15554f9, type: 3}
+    - target: {fileID: 2521195585874629542, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201443998189422392, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: keyId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778550915024902266, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_Name
+      value: PuzzleCrystalLightBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506133977570057151, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}

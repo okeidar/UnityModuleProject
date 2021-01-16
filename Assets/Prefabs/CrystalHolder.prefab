@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 25093637847073258}
   - component: {fileID: 6371491211593126379}
   - component: {fileID: 4943117958218769356}
-  m_Layer: 13
+  m_Layer: 18
   m_Name: CrystalHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

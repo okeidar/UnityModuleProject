@@ -6,9 +6,12 @@ public class Puzzle : MonoBehaviour
 {
     [SerializeField] protected KeyObject keyToSolve;
     [SerializeField] protected Animator m_anim;
-    [SerializeField] protected string m_animSolveBooleanName;    
-    
+    [SerializeField] protected string m_animSolveBooleanName;
+
+    public event System.Action<GameObject> OnPuzzleSolved;
     public bool PuzzleSolved { get; protected set; }
+    
+
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,5 +47,6 @@ public class Puzzle : MonoBehaviour
     }
     protected virtual void OnSolve(GameObject solutionItem)
     {
+        if(PuzzleSolved) OnPuzzleSolved?.Invoke(solutionItem);
     }
 }
