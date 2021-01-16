@@ -80,7 +80,7 @@ public class Scanner : MonoBehaviour
         return null;
     }
 
-    public void Deploy()
+    public void Deploy() //TODO: if interactable deploy should check puzzle ID
     {
         ActivateScanner(false);
         if(m_PreviewScanned)

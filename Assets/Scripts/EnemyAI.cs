@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Update() //TODO: states
+    void FixedUpdate() //TODO: states
     {
         if (Vector2.Distance(m_controlledEnemy.position, target.position) <= m_shooter.Range) //TODO: use LOS to move around obstacles
         {

@@ -5,6 +5,8 @@ using UnityEngine;
 public class DoorInteract : Puzzle
 {
     [SerializeField] private Collider2D m_DoorCollider;
+
+
     public override bool TrySolve(Pickable item)
     {
         return base.TrySolve(item);
@@ -12,7 +14,7 @@ public class DoorInteract : Puzzle
 
     protected override void OnSolve()
     {
-        m_Anim.SetBool("Solved", true);
+        m_anim.SetBool("Solved", true);
         m_DoorCollider.isTrigger = true;
     }
 }

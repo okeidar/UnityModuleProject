@@ -33,10 +33,14 @@ public class PlayerController : MonoBehaviour
     {
         GetPlayerInput();
         RotatePlayer(m_mouseLocation);
-        Move(m_movementInput);
         Shoot(m_isShootButtonPressed);
         Scan(m_isScanButtonHold, m_isScanButtonRelease);
         DeployScan(m_isDeployButtonPressed, m_isDeployButtonReleased, m_isDeployButtonHold);
+    }
+    private void FixedUpdate()
+    {
+        Move(m_movementInput);
+
     }
 
     private void InitUI()
