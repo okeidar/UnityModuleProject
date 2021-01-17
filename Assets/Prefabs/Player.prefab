@@ -184,6 +184,9 @@ MonoBehaviour:
   ScanTime: 0.5
   DeployTime: 0.5
   DeployChargeTime: 0.5
+  recalculateLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!60 &665705479467416865
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -262,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947e61a4116d7db4481b7d1e9358e227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 3
+  playerSpeed: 5
   basicBullet: {fileID: 1036809666010248385, guid: a572d9537491404469d8394c5ea122a0, type: 3}
   m_Scanner: {fileID: 665705479467416864}
   m_Health: {fileID: 1082008574}

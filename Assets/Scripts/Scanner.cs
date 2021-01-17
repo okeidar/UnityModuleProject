@@ -13,12 +13,12 @@ public class Scanner : MonoBehaviour
     [SerializeField] private float ScanTime = 1f;
     [SerializeField] private float DeployTime = 2f;
     [SerializeField] private float DeployChargeTime = 2f;
+    [SerializeField] LayerMask recalculateLayerMask;
     private float m_timeLeftToScan;
     private float m_timeLeftToDeploy;
     private float m_ChargeTimeEnd;
     private Collider2D m_Collider;
     private SpriteRenderer m_SR;
-    
 
 
     private Transform m_MouseTransform;
@@ -97,11 +97,12 @@ public class Scanner : MonoBehaviour
                 m_PreviewScanned.gameObject.transform.SetParent(null);
 
                 m_ChargeTimeEnd = Time.time + DeployChargeTime;
-                if (m_PreviewScanned.gameObject.layer == LayerMask.NameToLayer( "Obstacle"))//TODO: better
+                if (((1<<m_PreviewScanned.gameObject.layer) & recalculateLayerMask) !=0)
                 {
                     var collider = m_PreviewScanned.gameObject.GetComponent<Collider2D>();
                     if(collider)
                     {
+                        
                         AstarPath.active.UpdateGraphs(collider.bounds);
                     }
                 }

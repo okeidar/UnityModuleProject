@@ -34,6 +34,7 @@ public class Puzzle : MonoBehaviour
 
     public virtual bool TrySolve(Pickable item)
     {
+        if (item == null) return false ;
         Debug.Log($"compare: {item.GetType()}");
         PuzzleSolved = item is KeyObject && keyToSolve.KeyId == ((KeyObject)item).KeyId;  
         if(PuzzleSolved)

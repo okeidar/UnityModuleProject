@@ -7,7 +7,7 @@ using Assets.Scripts;
 public class EnemyAI : MonoBehaviour
 {
 
-    [SerializeField] Transform target;
+    [SerializeField] public Transform target;
     [SerializeField] float speed = 7f;
     [SerializeField] float nextWaypointDistance = .3f;
     [SerializeField] LayerMask myLayerMask;
