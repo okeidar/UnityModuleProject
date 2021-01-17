@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: YellowCrystalScannable 1
   m_EditorClassIdentifier: 
   grantedObjectPrefab: {fileID: 7360343811930753095, guid: ebebbe1ea8f15f3478a0ce5ed88e42c4, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: -7901613664639834912, guid: 2d2f0bdd4b10f6f429949b21d15554f9, type: 3}

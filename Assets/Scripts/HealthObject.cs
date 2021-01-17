@@ -23,6 +23,7 @@ public class HealthObject : MonoBehaviour
         Debug.Log(CurrentHealth);
         if (CurrentHealth <= 0)
         {
+            CurrentHealth = 0;
             if(m_player)
             {
                 m_player?.Kill();

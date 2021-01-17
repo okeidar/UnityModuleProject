@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LightBlueCrystalScannable
   m_EditorClassIdentifier: 
   grantedObjectPrefab: {fileID: 4959293572947702687, guid: cf2e5b25b4454c5469a722687b9be0e2, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 2562912776319624125, guid: 2d2f0bdd4b10f6f429949b21d15554f9, type: 3}
