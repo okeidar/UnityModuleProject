@@ -11,13 +11,18 @@ public class Puzzle : MonoBehaviour
     public event System.Action<GameObject> OnPuzzleSolved;
     public bool PuzzleSolved { get; protected set; }
     
-
-    
+   
+  
     private void OnTriggerEnter2D(Collider2D collision)
     {
         TriggerEntered(collision);
     }
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        TriggerEntered(collision.collider);
+    }
     protected virtual void TriggerEntered(Collider2D collision)
     {
         var player = collision.gameObject.GetComponent<PlayerController>();

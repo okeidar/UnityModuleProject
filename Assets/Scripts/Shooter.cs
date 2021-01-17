@@ -13,7 +13,7 @@ public class Shooter : MonoBehaviour, IShooter
     public float Range => range;
     public float FireRate => fireRate;
 
-    bool m_canShoot=true;
+    bool m_canShoot = true;
     Rigidbody2D m_owner;
 
     private void Start()
@@ -23,12 +23,21 @@ public class Shooter : MonoBehaviour, IShooter
 
     public void ShootAt(Transform target)
     {
-       if(m_canShoot)
+        if (m_canShoot)
         {
-            Vector2 direction = ((Vector2)target.position - m_owner.position).normalized;
-            Instantiate(bulletPrefab, m_owner.position, transform.rotation);
+            ForceShootAt(target);
             StartCoroutine(Cooldown());
         }
+    }
+    public void ForceShootAt(Transform target)
+    {
+        Vector2 basePos = transform.position;
+        if (m_owner != null)
+            basePos = m_owner.position;
+
+        Vector2 direction = ((Vector2)target.position - basePos).normalized;
+        
+        Instantiate(bulletPrefab, basePos, Quaternion.LookRotation(Vector3.back, direction));
     }
 
     private IEnumerator Cooldown()

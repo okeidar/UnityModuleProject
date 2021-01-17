@@ -119,7 +119,7 @@ MonoBehaviour:
   nextWaypointDistance: 0.3
   myLayerMask:
     serializedVersion: 2
-    m_Bits: 41216
+    m_Bits: 8448
 --- !u!114 &968973241
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -178,12 +178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28178a7f0c38a804e8f593afbee4dcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinDeployDistance: 0.5
-  m_MaxDeployDistance: 2
+  m_MinDeployDistance: 0.2
+  m_MaxDeployDistance: 5
   m_ShouldDeployOnMouse: 1
-  ScanTime: 1
-  DeployTime: 2
-  DeployChargeTime: 2
+  ScanTime: 0.5
+  DeployTime: 0.5
+  DeployChargeTime: 0.5
 --- !u!60 &665705479467416865
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947e61a4116d7db4481b7d1e9358e227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 7
+  playerSpeed: 3
   basicBullet: {fileID: 1036809666010248385, guid: a572d9537491404469d8394c5ea122a0, type: 3}
   m_Scanner: {fileID: 665705479467416864}
   m_Health: {fileID: 1082008574}

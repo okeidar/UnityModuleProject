@@ -208,6 +208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grantedObect: {fileID: 0}
+  ignoredLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   IsPreview: 0
   IsDeployable: 0
 --- !u!1001 &183913600

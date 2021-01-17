@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8702032668300574234}
-  - component: {fileID: 8549515533177937268}
   - component: {fileID: 2236994108859190963}
   - component: {fileID: 3559058652633595968}
-  m_Layer: 15
-  m_Name: InvinsibleTurret
-  m_TagString: Untagged
+  - component: {fileID: 1359039397}
+  - component: {fileID: 1359039394}
+  m_Layer: 17
+  m_Name: InvincibleTurret
+  m_TagString: RangeMarker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,22 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &8549515533177937268
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2196035333366542159}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.3, y: 0.5}
-  m_Direction: 0
 --- !u!114 &2236994108859190963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
-  fireRate: 0.2
-  bulletPrefab: {fileID: 1036809666010248385, guid: ea91d2ed370fb7d42bc796662bdd75cb, type: 3}
+  fireRate: 0.5
+  bulletPrefab: {fileID: 1689142726591719894, guid: a2a22f25f746247499afdf3122762926, type: 3}
 --- !u!114 &3559058652633595968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +62,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8dec80634071ef418747e98639fa06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rangeTrigger: {fileID: 1359039394}
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!50 &1359039397
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196035333366542159}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1359039394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2196035333366542159}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.21}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34016472, y: 3.02}
+  m_EdgeRadius: 0
 --- !u!1 &4834196872901072446
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,8 +123,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3330058444883524812}
   - component: {fileID: 6291600848653917713}
-  m_Layer: 15
-  m_Name: EnemySprite
+  - component: {fileID: 1364621665}
+  m_Layer: 21
+  m_Name: TurretSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,8 +139,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4834196872901072446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_LocalPosition: {x: -0, y: -0.37, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 8702032668300574234}
   m_RootOrder: 0
@@ -148,8 +185,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857974283
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26630876e7e186b4a9822eca25da27fa, type: 3}
-  m_Color: {r: 0.29587254, g: 0.7924528, b: 0.18316127, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 504ad6ab25836a7459fc0a492a24ac6e, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.010215759, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -159,3 +196,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1364621665
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4834196872901072446}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0018850453, y: 0.07462933}
+  m_Size: {x: 0.0661833, y: 0.08040942}
+  m_Direction: 0
