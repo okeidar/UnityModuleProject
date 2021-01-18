@@ -117,6 +117,7 @@ public class Scanner : MonoBehaviour
         {
             var objToDeploy = Instantiate(m_ScannedObject.grantedObjectPrefab, GetPreviewPosition(mouseLocation), Quaternion.identity);
             m_PreviewScanned = objToDeploy.GetComponent<Scannable>();
+            m_PreviewScanned.transform.up = -transform.up;
             m_PreviewScanned.gameObject.transform.SetParent(gameObject.transform);
             m_PreviewScanned.OnPreviewStart();
             m_timeLeftToDeploy = DeployTime;
