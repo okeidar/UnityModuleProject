@@ -36,18 +36,18 @@ PrefabInstance:
     - target: {fileID: 4111685019575840352, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: grantedItem
       value: 
-      objectReference: {fileID: 11400000, guid: 2cc12924f98ca6745b8bdb617ebacbc3, type: 2}
+      objectReference: {fileID: 11400000, guid: 865145988ce4a1e4f902a9ce3e359891, type: 2}
     - target: {fileID: 4111685019575840353, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: m_Name
-      value: FireballSpell
+      value: IcycleSpell
       objectReference: {fileID: 0}
     - target: {fileID: 4111685019575840355, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.753986
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4111685019575840355, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -53.472088
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4111685019575840355, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -96,11 +96,11 @@ PrefabInstance:
     - target: {fileID: 5662273108217267248, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3211469460930242951, guid: 082f1f9a55a4988469aa1dc9b9f216fb, type: 3}
+      objectReference: {fileID: 6171869821479677305, guid: 082f1f9a55a4988469aa1dc9b9f216fb, type: 3}
     - target: {fileID: 7425459309086587575, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
       propertyPath: grantedObect
       value: 
-      objectReference: {fileID: 11400000, guid: 8e8b95311a418e94b853559f619f9678, type: 2}
+      objectReference: {fileID: 11400000, guid: e2b01f40ef35255429c469c186c01515, type: 2}
     m_RemovedComponents:
     - {fileID: 2720176609114163879, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1a00adeb890058d409eaf8d999b8f3e2, type: 3}

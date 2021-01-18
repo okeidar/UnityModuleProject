@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02c83e1cd45f9ac41a991ce1341360b3, type: 3}
-  m_Name: FireBook
+  m_Name: IceBook
   m_EditorClassIdentifier: 
   shouldDestroyOnPickup: 1
-  Icon: {fileID: 21300000, guid: 568175c580f88d540992e063019cdfe5, type: 3}
-  bulletPrefab: {fileID: 1689142726591719894, guid: e1ea9f0fbce300c419db2a558de8a5b9, type: 3}
+  Icon: {fileID: -993579539645238101, guid: ed0e5867aaf84e942970e7ad547477f6, type: 3}
+  bulletPrefab: {fileID: 1689142726591719894, guid: 0e38d0d44cbf80748b252a5461950701, type: 3}
   ammo: 50

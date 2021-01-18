@@ -1,7 +1,367 @@
 fileFormatVersion: 2
 guid: ed0e5867aaf84e942970e7ad547477f6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8981041623332558862
+    second: IcePick_64x64_0
+  - first:
+      213: -5356971090777193772
+    second: IcePick_64x64_1
+  - first:
+      213: 7366313075214986631
+    second: IcePick_64x64_2
+  - first:
+      213: 2765815055090385697
+    second: IcePick_64x64_3
+  - first:
+      213: 9045646296285202316
+    second: IcePick_64x64_4
+  - first:
+      213: -2812666139675153807
+    second: IcePick_64x64_5
+  - first:
+      213: -7260767870296518370
+    second: IcePick_64x64_6
+  - first:
+      213: 6763042522404034134
+    second: IcePick_64x64_7
+  - first:
+      213: -993579539645238101
+    second: IcePick_64x64_8
+  - first:
+      213: -8403054336925157704
+    second: IcePick_64x64_9
+  - first:
+      213: 1336067717921724041
+    second: IcePick_64x64_10
+  - first:
+      213: 2048854677528871979
+    second: IcePick_64x64_11
+  - first:
+      213: -5327287676498828828
+    second: IcePick_64x64_12
+  - first:
+      213: -302609039763634214
+    second: IcePick_64x64_13
+  - first:
+      213: -5706121564508659786
+    second: IcePick_64x64_14
+  - first:
+      213: -5095893429281275314
+    second: IcePick_64x64_15
+  - first:
+      213: 5055452360963731221
+    second: IcePick_64x64_16
+  - first:
+      213: -1058914290989979957
+    second: IcePick_64x64_17
+  - first:
+      213: -24785127853075211
+    second: IcePick_64x64_18
+  - first:
+      213: 2717748618279137258
+    second: IcePick_64x64_19
+  - first:
+      213: 3093828374674960192
+    second: IcePick_64x64_20
+  - first:
+      213: -3083201145662360126
+    second: IcePick_64x64_21
+  - first:
+      213: 60477272973469323
+    second: IcePick_64x64_22
+  - first:
+      213: -8562026203919871860
+    second: IcePick_64x64_23
+  - first:
+      213: 268595678250356040
+    second: IcePick_64x64_24
+  - first:
+      213: -2325077028751242871
+    second: IcePick_64x64_25
+  - first:
+      213: 4395936302616228397
+    second: IcePick_64x64_26
+  - first:
+      213: -89418265423339903
+    second: IcePick_64x64_27
+  - first:
+      213: 52284079601858727
+    second: IcePick_64x64_28
+  - first:
+      213: -2381943402078938117
+    second: IcePick_64x64_29
+  - first:
+      213: -8725109348711070549
+    second: IcePick_64x64_30
+  - first:
+      213: -4246475323524181719
+    second: IcePick_64x64_31
+  - first:
+      213: 1197661370672736345
+    second: IcePick_64x64_32
+  - first:
+      213: 6284102616853672496
+    second: IcePick_64x64_33
+  - first:
+      213: 5450623013812274284
+    second: IcePick_64x64_34
+  - first:
+      213: 7176517744270094220
+    second: IcePick_64x64_35
+  - first:
+      213: 3343146452976095776
+    second: IcePick_64x64_36
+  - first:
+      213: -5946177013550946531
+    second: IcePick_64x64_37
+  - first:
+      213: -1413381582540632272
+    second: IcePick_64x64_38
+  - first:
+      213: -3209526162505860081
+    second: IcePick_64x64_39
+  - first:
+      213: 8589500804232280733
+    second: IcePick_64x64_40
+  - first:
+      213: -1566564839390338525
+    second: IcePick_64x64_41
+  - first:
+      213: 2577841032462636144
+    second: IcePick_64x64_42
+  - first:
+      213: -6753053460496088178
+    second: IcePick_64x64_43
+  - first:
+      213: 4000389817550591146
+    second: IcePick_64x64_44
+  - first:
+      213: 5316518022638897590
+    second: IcePick_64x64_45
+  - first:
+      213: 6042070241933868975
+    second: IcePick_64x64_46
+  - first:
+      213: -1332756352710934849
+    second: IcePick_64x64_47
+  - first:
+      213: -4561490284588353248
+    second: IcePick_64x64_48
+  - first:
+      213: -4713963232898767105
+    second: IcePick_64x64_49
+  - first:
+      213: -1879622567413951410
+    second: IcePick_64x64_50
+  - first:
+      213: 7438813822547317809
+    second: IcePick_64x64_51
+  - first:
+      213: -6271563116766342769
+    second: IcePick_64x64_52
+  - first:
+      213: -8884167362126251680
+    second: IcePick_64x64_53
+  - first:
+      213: 6427667024693530298
+    second: IcePick_64x64_54
+  - first:
+      213: -7764615626716291839
+    second: IcePick_64x64_55
+  - first:
+      213: 3808414629295088330
+    second: IcePick_64x64_56
+  - first:
+      213: 3374444317031014411
+    second: IcePick_64x64_57
+  - first:
+      213: 8354701703795967176
+    second: IcePick_64x64_58
+  - first:
+      213: 2163609132725234061
+    second: IcePick_64x64_59
+  - first:
+      213: -5204934179183625879
+    second: IcePick_64x64_60
+  - first:
+      213: -6407383412741865236
+    second: IcePick_64x64_61
+  - first:
+      213: 7144750191504190727
+    second: IcePick_64x64_62
+  - first:
+      213: 193614905127401530
+    second: IcePick_64x64_63
+  - first:
+      213: -2713406938314499662
+    second: IcePick_64x64_64
+  - first:
+      213: 5753842479808937507
+    second: IcePick_64x64_65
+  - first:
+      213: 3419138905841227192
+    second: IcePick_64x64_66
+  - first:
+      213: -8420885956608364468
+    second: IcePick_64x64_67
+  - first:
+      213: 8100485446173375390
+    second: IcePick_64x64_68
+  - first:
+      213: -5408578643399573620
+    second: IcePick_64x64_69
+  - first:
+      213: -2700719658939474020
+    second: IcePick_64x64_70
+  - first:
+      213: 6486624953512878453
+    second: IcePick_64x64_71
+  - first:
+      213: -7124217304314065492
+    second: IcePick_64x64_72
+  - first:
+      213: -58962726042633141
+    second: IcePick_64x64_73
+  - first:
+      213: -1056505145008194820
+    second: IcePick_64x64_74
+  - first:
+      213: -8363798829765673038
+    second: IcePick_64x64_75
+  - first:
+      213: 3058572124258404815
+    second: IcePick_64x64_76
+  - first:
+      213: -6375660460349271759
+    second: IcePick_64x64_77
+  - first:
+      213: -4636464204041911061
+    second: IcePick_64x64_78
+  - first:
+      213: 6953190382189101275
+    second: IcePick_64x64_79
+  - first:
+      213: 1064097742515462937
+    second: IcePick_64x64_80
+  - first:
+      213: -5695728720013794499
+    second: IcePick_64x64_81
+  - first:
+      213: -289804258436139613
+    second: IcePick_64x64_82
+  - first:
+      213: 8431541536964785563
+    second: IcePick_64x64_83
+  - first:
+      213: 8187314373744891884
+    second: IcePick_64x64_84
+  - first:
+      213: -6111720174884288820
+    second: IcePick_64x64_85
+  - first:
+      213: -6487496625261615450
+    second: IcePick_64x64_86
+  - first:
+      213: 8471130024618497180
+    second: IcePick_64x64_87
+  - first:
+      213: -456528536187467732
+    second: IcePick_64x64_88
+  - first:
+      213: -2760182971213742224
+    second: IcePick_64x64_89
+  - first:
+      213: -2221370462286529179
+    second: IcePick_64x64_90
+  - first:
+      213: -4864434326253364166
+    second: IcePick_64x64_91
+  - first:
+      213: 4892145445824757402
+    second: IcePick_64x64_92
+  - first:
+      213: 4232252540008483344
+    second: IcePick_64x64_93
+  - first:
+      213: 900234349573058224
+    second: IcePick_64x64_94
+  - first:
+      213: -7149370861356137892
+    second: IcePick_64x64_95
+  - first:
+      213: 3797615014838631288
+    second: IcePick_64x64_96
+  - first:
+      213: -7175410762287539637
+    second: IcePick_64x64_97
+  - first:
+      213: 6423706466251806493
+    second: IcePick_64x64_98
+  - first:
+      213: 5273859760787601245
+    second: IcePick_64x64_99
+  - first:
+      213: 6994850567277031790
+    second: IcePick_64x64_100
+  - first:
+      213: 7610524414024135171
+    second: IcePick_64x64_101
+  - first:
+      213: 8557206364173077866
+    second: IcePick_64x64_102
+  - first:
+      213: -775214845846997122
+    second: IcePick_64x64_103
+  - first:
+      213: 2235165311579783790
+    second: IcePick_64x64_104
+  - first:
+      213: 9195539624119640616
+    second: IcePick_64x64_105
+  - first:
+      213: -6645166280119522584
+    second: IcePick_64x64_106
+  - first:
+      213: -422825415963857605
+    second: IcePick_64x64_107
+  - first:
+      213: 1640625766390412673
+    second: IcePick_64x64_108
+  - first:
+      213: 8335016460751019531
+    second: IcePick_64x64_109
+  - first:
+      213: -1821099246271281439
+    second: IcePick_64x64_110
+  - first:
+      213: 1584178168817756731
+    second: IcePick_64x64_111
+  - first:
+      213: 7044966439093455095
+    second: IcePick_64x64_112
+  - first:
+      213: 5215780831631160056
+    second: IcePick_64x64_113
+  - first:
+      213: 1842798993594654278
+    second: IcePick_64x64_114
+  - first:
+      213: 8733159984877280283
+    second: IcePick_64x64_115
+  - first:
+      213: -2075008161040476024
+    second: IcePick_64x64_116
+  - first:
+      213: -2054507314928576887
+    second: IcePick_64x64_117
+  - first:
+      213: 1097492214425942797
+    second: IcePick_64x64_118
+  - first:
+      213: 3148200306954078763
+    second: IcePick_64x64_119
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +392,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +401,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +433,651 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: IcePick_64x64_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e081cb7d5c113ac70800000000000000
+      internalID: 8981041623332558862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d24036ec2738a5b0800000000000000
+      internalID: -5356971090777193772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d2188a6b66a3660800000000000000
+      internalID: 7366313075214986631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12307118326226620800000000000000
+      internalID: 2765815055090385697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8748ed6167988d70800000000000000
+      internalID: 9045646296285202316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17aa4e05c0767f8d0800000000000000
+      internalID: -2812666139675153807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11186657129c3b90800000000000000
+      internalID: -7260767870296518370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65611cc87572bdd50800000000000000
+      internalID: 6763042522404034134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba479534ca81632f0800000000000000
+      internalID: -993579539645238101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b635431a9a526b80800000000000000
+      internalID: -8403054336925157704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986579ab28aaa8210800000000000000
+      internalID: 1336067717921724041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b248182597efe6c10800000000000000
+      internalID: 2048854677528871979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1a8f9551ca116b0800000000000000
+      internalID: -5327287676498828828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7011f7eaaeccbf0800000000000000
+      internalID: -302609039763634214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfd34e5ba8cfc0b0800000000000000
+      internalID: -5706121564508659786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42417edcefb749b0800000000000000
+      internalID: -5095893429281275314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f272a2323982640800000000000000
+      internalID: 5055452360963731221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc625fd001bfd41f0800000000000000
+      internalID: -1058914290989979957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_18
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4da9abe02f7aff0800000000000000
+      internalID: -24785127853075211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_19
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef265518f167b520800000000000000
+      internalID: 2717748618279137258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f6684d38c7fea20800000000000000
+      internalID: 3093828374674960192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_21
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5b7bdb4e44635d0800000000000000
+      internalID: -3083201145662360126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_22
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86619462cbd6d000800000000000000
+      internalID: 60477272973469323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_23
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8015c5f7829d2980800000000000000
+      internalID: -8562026203919871860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d4156a85e3ab300800000000000000
+      internalID: 268595678250356040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_25
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9898cd9d2caabbfd0800000000000000
+      internalID: -2325077028751242871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_26
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d223facc6c0810d30800000000000000
+      internalID: 4395936302616228397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_27
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e9205bf8252cef0800000000000000
+      internalID: -89418265423339903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_28
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8b318e710c9b000800000000000000
+      internalID: 52284079601858727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IcePick_64x64_29
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbdffb8813a1fed0800000000000000
+      internalID: -2381943402078938117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

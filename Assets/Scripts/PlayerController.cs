@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private bool m_isScanButtonRelease = false;
     private bool m_isDeployButtonPressed = false;
     private bool m_isDeployButtonReleased = false;
-    private bool m_isDeployButtonHold =false;
+    private bool m_isDeployButtonHold = false;
     Weapon weapon;
     private Pickable m_objectInHand;
     private int ammo = 0; //TODO: where to handle?
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private void GetPlayerInput()
     {
         m_movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        m_mouseLocation =Camera.main.ScreenToWorldPoint( Input.mousePosition);
+        m_mouseLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         m_isShootButtonPressed = Input.GetButtonDown("Fire1");
         m_isScanButtonHold = Input.GetButton("Fire2");
         m_isScanButtonRelease = Input.GetButtonUp("Fire2");
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Move(Vector2 movement) //TODO:should be in a movement interface
-    {       
+    {
         Vector2 normalizedMovement = movement * playerSpeed * Time.deltaTime;
         m_controlledBody.MovePosition(m_controlledBody.position + normalizedMovement);
     }
@@ -65,24 +65,36 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 lookAt = direction - m_controlledBody.position;
         float targetAngle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90f;
-    
-        m_controlledBody.MoveRotation( targetAngle);
+
+        m_controlledBody.MoveRotation(targetAngle);
     }
 
-    void Shoot(bool isShootButtonPressed) // TODO: should be in an interface
+    void Shoot(bool isShootButtonPressed) // TODO: should be in shooter class
     {
-        if(isShootButtonPressed)
+        if (isShootButtonPressed)
         {
             if (weapon == null)
             {
-                var bullet = Instantiate(basicBullet, m_controlledBody.position, transform.rotation);               
+                Instantiate(basicBullet, m_controlledBody.position, transform.rotation);
             }
             else
             {
-                Instantiate(weapon.bulletPrefab, m_controlledBody.position, transform.rotation);
+                var bullet = Instantiate(weapon.bulletPrefab, m_controlledBody.position, transform.rotation);
+
+                var splitShot = bullet.GetComponent<SplitShotProjectile>();
+                if (splitShot)
+                {
+                    foreach (var angle in splitShot._angles)
+                    {
+                        var rotation = transform.rotation * Quaternion.Euler(0f, 0f, angle);
+
+                        Instantiate(weapon.bulletPrefab, m_controlledBody.position, rotation);
+                    }
+                }
+
                 ammo--;
                 UIManager.Instance.SetAmmo(ammo);
-                if(ammo<=0)
+                if (ammo <= 0)
                 {
                     weapon = null;
                     UIManager.Instance.SetDefaultWeapon();
@@ -97,12 +109,12 @@ public class PlayerController : MonoBehaviour
         if (isScanHeld)
         {
             var item = m_Scanner.Scan();
-            if(item != null)
+            if (item != null)
             {
                 UIManager.Instance.SetScannedItem(item.Icon);
             }
-        } 
-        if(isScanReleased)
+        }
+        if (isScanReleased)
         {
             m_Scanner.StopScan();
         }
@@ -113,13 +125,13 @@ public class PlayerController : MonoBehaviour
         if (isDeployedReleased)
         {
             m_Scanner.Deploy();
-        } 
+        }
         else
         if (isDeployedPressed)
         {
             m_Scanner.StartPreview(m_mouseLocation);
         }
-        if(isDeployPreview)
+        if (isDeployPreview)
         {
             m_Scanner.UpdatePreview(m_mouseLocation);
         }
@@ -138,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
     private void DropObjectInHand()
     {
-        if(m_objectInHand is Weapon)
+        if (m_objectInHand is Weapon)
         {
             weapon = null;
             ammo = 0;
@@ -149,7 +161,7 @@ public class PlayerController : MonoBehaviour
     public void TakeItem(Pickable item)
     {
         Debug.Log($"Player took {item.name}");
-        if(m_objectInHand != null)
+        if (m_objectInHand != null)
         {
             DropObjectInHand();
         }
