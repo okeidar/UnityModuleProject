@@ -37,11 +37,17 @@ public class Projectile : MonoBehaviour
 
 
     }
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision) //this is a very bad place to do that, it should be in a damageable interface or in the health script. 
     {
         var healthComponent = collision.gameObject.GetComponent<HealthObject>();
         if (healthComponent)
         {
+            var vaulnerability = healthComponent as HealthWithVulnerability;
+            if (vaulnerability != null && !gameObject.name.StartsWith(vaulnerability._weaknessBulletPrefab.name))
+            {
+                Destroy(gameObject);
+                return;
+            }
             healthComponent.Damage(damage);
         }
         Destroy(gameObject);
@@ -53,6 +59,6 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
         */
-        
+
     }
 }

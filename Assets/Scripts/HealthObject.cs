@@ -17,7 +17,7 @@ public class HealthObject : MonoBehaviour
         m_player = gameObject.GetComponent<PlayerController>();
     }
 
-    public void Damage(int damage)
+    public virtual void Damage(int damage)
     {
         CurrentHealth -= damage;
         Debug.Log(CurrentHealth);
