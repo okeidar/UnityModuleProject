@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RedCrystalScannable
   m_EditorClassIdentifier: 
   grantedObjectPrefab: {fileID: 3778550915024902266, guid: 6f46a1504c0594c4eace991c6e43ad32, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 6633299250112346112, guid: 2d2f0bdd4b10f6f429949b21d15554f9, type: 3}

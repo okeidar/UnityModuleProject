@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
 
     private void Awake() {
         Instance = this;
+        UIManager.Instance.SetDefaultWeapon();
+        UIManager.Instance.SetItemInHand(null);
+        UIManager.Instance.SetScannedItem(null);
     }
     public void SetScannedItem(Sprite item)
     {

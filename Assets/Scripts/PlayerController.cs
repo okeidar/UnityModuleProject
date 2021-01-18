@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         m_controlledBody = GetComponent<Rigidbody2D>();
-        InitUI();
+        UIManager.Instance.SetLife(m_Health.CurrentHealth);
     }
 
     // Update is called once per frame
@@ -43,14 +43,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void InitUI()
-    {
-        UIManager.Instance.SetDefaultWeapon();
-        UIManager.Instance.SetLife(m_Health.CurrentHealth);
-        UIManager.Instance.SetItemInHand(null);
-        UIManager.Instance.SetScannedItem(null);
-    }
-
     private void GetPlayerInput()
     {
         m_movementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -61,7 +53,6 @@ public class PlayerController : MonoBehaviour
         m_isDeployButtonPressed = Input.GetButtonDown("Fire3");
         m_isDeployButtonHold = Input.GetButton("Fire3");
         m_isDeployButtonReleased = Input.GetButtonUp("Fire3");
-    
     }
 
     void Move(Vector2 movement) //TODO:should be in a movement interface
@@ -178,7 +169,6 @@ public class PlayerController : MonoBehaviour
 
     public void Kill()
     {
-        UIManager.Instance.GameOver();
-        Debug.Log("GameOver");
+        GameManager.instance.EndGame();
     }
 }

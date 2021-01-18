@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GolemTurret
   m_EditorClassIdentifier: 
   grantedObjectPrefab: {fileID: 1032197263167644252, guid: 9a9c07c317c283c4cb29eb0b9d03a00b, type: 3}
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 30508ab71c84e904db954edbb8cc67d0, type: 3}

@@ -147,7 +147,7 @@ public class Scanner : MonoBehaviour
         }
         var distance = (mouseLocation - new Vector2(transform.position.x, transform.position.y)).sqrMagnitude;
         distance = Mathf.Clamp(distance, m_MinDeployDistance, m_MaxDeployDistance);
-        return transform.position + transform.up * distance;
+        return transform.position + transform.up * Mathf.Sqrt(distance);
     }
     public void ActivateScanner(bool activate)
     {
