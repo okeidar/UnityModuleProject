@@ -1,7 +1,907 @@
 fileFormatVersion: 2
 guid: e3c3b9588f6003341922f70463d8ef55
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3723959565391247759
+    second: SmallStar_64x64_0
+  - first:
+      213: 3143079028607986717
+    second: SmallStar_64x64_1
+  - first:
+      213: -3188429752345695144
+    second: SmallStar_64x64_2
+  - first:
+      213: 1262976118324541866
+    second: SmallStar_64x64_3
+  - first:
+      213: 3040277757795443889
+    second: SmallStar_64x64_4
+  - first:
+      213: -554839136234391485
+    second: SmallStar_64x64_5
+  - first:
+      213: -8340343898616563204
+    second: SmallStar_64x64_6
+  - first:
+      213: -2815998857346807849
+    second: SmallStar_64x64_7
+  - first:
+      213: 211536095664178172
+    second: SmallStar_64x64_8
+  - first:
+      213: 1624978227248931447
+    second: SmallStar_64x64_9
+  - first:
+      213: 2455746626013750496
+    second: SmallStar_64x64_10
+  - first:
+      213: -1456329362198790388
+    second: SmallStar_64x64_11
+  - first:
+      213: -7985422293487783362
+    second: SmallStar_64x64_12
+  - first:
+      213: 5810896446194009131
+    second: SmallStar_64x64_13
+  - first:
+      213: 4662660528260508825
+    second: SmallStar_64x64_14
+  - first:
+      213: -1448869133784991092
+    second: SmallStar_64x64_15
+  - first:
+      213: 5734297375590105983
+    second: SmallStar_64x64_16
+  - first:
+      213: 7184512822983078943
+    second: SmallStar_64x64_17
+  - first:
+      213: 540328344931165649
+    second: SmallStar_64x64_18
+  - first:
+      213: 4011536828966260113
+    second: SmallStar_64x64_19
+  - first:
+      213: -3734194016819797366
+    second: SmallStar_64x64_20
+  - first:
+      213: 7230224780562524647
+    second: SmallStar_64x64_21
+  - first:
+      213: 804234514109006575
+    second: SmallStar_64x64_22
+  - first:
+      213: -4874878717915060546
+    second: SmallStar_64x64_23
+  - first:
+      213: -8354640454283437752
+    second: SmallStar_64x64_24
+  - first:
+      213: -8652109140217531241
+    second: SmallStar_64x64_25
+  - first:
+      213: -3026301274265566828
+    second: SmallStar_64x64_26
+  - first:
+      213: 596389229916590430
+    second: SmallStar_64x64_27
+  - first:
+      213: -8199714809061403957
+    second: SmallStar_64x64_28
+  - first:
+      213: 3710023690338578679
+    second: SmallStar_64x64_29
+  - first:
+      213: 4386782515054099162
+    second: SmallStar_64x64_30
+  - first:
+      213: 5426116234522830261
+    second: SmallStar_64x64_31
+  - first:
+      213: -4918375345172704007
+    second: SmallStar_64x64_32
+  - first:
+      213: -5211869642414748053
+    second: SmallStar_64x64_33
+  - first:
+      213: 784261172299947774
+    second: SmallStar_64x64_34
+  - first:
+      213: -1347946375354009405
+    second: SmallStar_64x64_35
+  - first:
+      213: -604711503962615051
+    second: SmallStar_64x64_36
+  - first:
+      213: -8742827862250616349
+    second: SmallStar_64x64_37
+  - first:
+      213: 8291785906495765960
+    second: SmallStar_64x64_38
+  - first:
+      213: -228260821117358870
+    second: SmallStar_64x64_39
+  - first:
+      213: 467639678948053929
+    second: SmallStar_64x64_40
+  - first:
+      213: -4278017956759958715
+    second: SmallStar_64x64_41
+  - first:
+      213: 4694241993325770868
+    second: SmallStar_64x64_42
+  - first:
+      213: -2227857508702903264
+    second: SmallStar_64x64_43
+  - first:
+      213: -1826200369768070387
+    second: SmallStar_64x64_44
+  - first:
+      213: -6352405662332095088
+    second: SmallStar_64x64_45
+  - first:
+      213: 8854901687157293666
+    second: SmallStar_64x64_46
+  - first:
+      213: -4379762296943677274
+    second: SmallStar_64x64_47
+  - first:
+      213: -6035387011243530865
+    second: SmallStar_64x64_48
+  - first:
+      213: -2237240611024254664
+    second: SmallStar_64x64_49
+  - first:
+      213: 4809567550776940655
+    second: SmallStar_64x64_50
+  - first:
+      213: -8366218248556377543
+    second: SmallStar_64x64_51
+  - first:
+      213: 6816159838943011463
+    second: SmallStar_64x64_52
+  - first:
+      213: 1644889100475393808
+    second: SmallStar_64x64_53
+  - first:
+      213: 7890155416523065603
+    second: SmallStar_64x64_54
+  - first:
+      213: -2829439471430808365
+    second: SmallStar_64x64_55
+  - first:
+      213: 7446188180088340005
+    second: SmallStar_64x64_56
+  - first:
+      213: -219910015691294767
+    second: SmallStar_64x64_57
+  - first:
+      213: -3401441759189441988
+    second: SmallStar_64x64_58
+  - first:
+      213: -3611204644445161781
+    second: SmallStar_64x64_59
+  - first:
+      213: 11060098232967225
+    second: SmallStar_64x64_60
+  - first:
+      213: 2479699503495031159
+    second: SmallStar_64x64_61
+  - first:
+      213: 5234381520095311761
+    second: SmallStar_64x64_62
+  - first:
+      213: -6513583308304438655
+    second: SmallStar_64x64_63
+  - first:
+      213: 1470082738344564347
+    second: SmallStar_64x64_64
+  - first:
+      213: 121568304850339520
+    second: SmallStar_64x64_65
+  - first:
+      213: 7357792259443224224
+    second: SmallStar_64x64_66
+  - first:
+      213: 533229204493427482
+    second: SmallStar_64x64_67
+  - first:
+      213: -8741656862574467418
+    second: SmallStar_64x64_68
+  - first:
+      213: 2622650345350997195
+    second: SmallStar_64x64_69
+  - first:
+      213: 5748691789133758824
+    second: SmallStar_64x64_70
+  - first:
+      213: -3916248337801718250
+    second: SmallStar_64x64_71
+  - first:
+      213: -6249580659245636696
+    second: SmallStar_64x64_72
+  - first:
+      213: -6857758152780423844
+    second: SmallStar_64x64_73
+  - first:
+      213: 334389444926435366
+    second: SmallStar_64x64_74
+  - first:
+      213: 8473942799875244474
+    second: SmallStar_64x64_75
+  - first:
+      213: 1434215891831531763
+    second: SmallStar_64x64_76
+  - first:
+      213: 2447745837206831572
+    second: SmallStar_64x64_77
+  - first:
+      213: -6992517358562791698
+    second: SmallStar_64x64_78
+  - first:
+      213: -8593927906266630319
+    second: SmallStar_64x64_79
+  - first:
+      213: 2821656249753633230
+    second: SmallStar_64x64_80
+  - first:
+      213: -5198918205040394094
+    second: SmallStar_64x64_81
+  - first:
+      213: 7710884477751011788
+    second: SmallStar_64x64_82
+  - first:
+      213: -6455997163810028902
+    second: SmallStar_64x64_83
+  - first:
+      213: -21416725771060389
+    second: SmallStar_64x64_84
+  - first:
+      213: -142973175011223917
+    second: SmallStar_64x64_85
+  - first:
+      213: -7772925467372276839
+    second: SmallStar_64x64_86
+  - first:
+      213: 8318398462198984052
+    second: SmallStar_64x64_87
+  - first:
+      213: -801962522220597036
+    second: SmallStar_64x64_88
+  - first:
+      213: 2997310922742280136
+    second: SmallStar_64x64_89
+  - first:
+      213: 1953996395700858357
+    second: SmallStar_64x64_90
+  - first:
+      213: 6149201394842540108
+    second: SmallStar_64x64_91
+  - first:
+      213: 3310336509115484576
+    second: SmallStar_64x64_92
+  - first:
+      213: 5985317216149147533
+    second: SmallStar_64x64_93
+  - first:
+      213: 289435582122362769
+    second: SmallStar_64x64_94
+  - first:
+      213: -4542424668358137294
+    second: SmallStar_64x64_95
+  - first:
+      213: -1846692996575331858
+    second: SmallStar_64x64_96
+  - first:
+      213: 4493742222485058852
+    second: SmallStar_64x64_97
+  - first:
+      213: -8848424100367102437
+    second: SmallStar_64x64_98
+  - first:
+      213: -2652468004630774315
+    second: SmallStar_64x64_99
+  - first:
+      213: -6946350396169027803
+    second: SmallStar_64x64_100
+  - first:
+      213: 392054321443151139
+    second: SmallStar_64x64_101
+  - first:
+      213: 4766348873912715654
+    second: SmallStar_64x64_102
+  - first:
+      213: -7452965964575163776
+    second: SmallStar_64x64_103
+  - first:
+      213: 6768447313911833399
+    second: SmallStar_64x64_104
+  - first:
+      213: -747561204319886651
+    second: SmallStar_64x64_105
+  - first:
+      213: 4743407925422222496
+    second: SmallStar_64x64_106
+  - first:
+      213: -9074133595168582548
+    second: SmallStar_64x64_107
+  - first:
+      213: -1538121976307001544
+    second: SmallStar_64x64_108
+  - first:
+      213: -3992692364623637836
+    second: SmallStar_64x64_109
+  - first:
+      213: -989114871201154995
+    second: SmallStar_64x64_110
+  - first:
+      213: 6925703241640773351
+    second: SmallStar_64x64_111
+  - first:
+      213: -3157830284932292924
+    second: SmallStar_64x64_112
+  - first:
+      213: -449711333711578656
+    second: SmallStar_64x64_113
+  - first:
+      213: 1115700103618995974
+    second: SmallStar_64x64_114
+  - first:
+      213: -5466745395276037492
+    second: SmallStar_64x64_115
+  - first:
+      213: 1626833136092485420
+    second: SmallStar_64x64_116
+  - first:
+      213: -1182718828931291592
+    second: SmallStar_64x64_117
+  - first:
+      213: 6107579658368750714
+    second: SmallStar_64x64_118
+  - first:
+      213: 950426716768924747
+    second: SmallStar_64x64_119
+  - first:
+      213: -7308336137537039033
+    second: SmallStar_64x64_120
+  - first:
+      213: -5816433302823023175
+    second: SmallStar_64x64_121
+  - first:
+      213: 4888981532950817927
+    second: SmallStar_64x64_122
+  - first:
+      213: 514137902939544622
+    second: SmallStar_64x64_123
+  - first:
+      213: -281637794113826862
+    second: SmallStar_64x64_124
+  - first:
+      213: -5199573878317772316
+    second: SmallStar_64x64_125
+  - first:
+      213: 1515759551186641489
+    second: SmallStar_64x64_126
+  - first:
+      213: 8605351217722544811
+    second: SmallStar_64x64_127
+  - first:
+      213: 2120916923010859951
+    second: SmallStar_64x64_128
+  - first:
+      213: 6509958277459083794
+    second: SmallStar_64x64_129
+  - first:
+      213: -6678798501297100223
+    second: SmallStar_64x64_130
+  - first:
+      213: -7061391250932364466
+    second: SmallStar_64x64_131
+  - first:
+      213: -4269868531994694615
+    second: SmallStar_64x64_132
+  - first:
+      213: -4729406386566272424
+    second: SmallStar_64x64_133
+  - first:
+      213: -5676876706037907712
+    second: SmallStar_64x64_134
+  - first:
+      213: -2153005908538703241
+    second: SmallStar_64x64_135
+  - first:
+      213: 6220687632731448476
+    second: SmallStar_64x64_136
+  - first:
+      213: 7246782230465975520
+    second: SmallStar_64x64_137
+  - first:
+      213: 941542213169239303
+    second: SmallStar_64x64_138
+  - first:
+      213: -7084890711851865235
+    second: SmallStar_64x64_139
+  - first:
+      213: 6385979217845668482
+    second: SmallStar_64x64_140
+  - first:
+      213: -7372374313078109774
+    second: SmallStar_64x64_141
+  - first:
+      213: 5551630222541323544
+    second: SmallStar_64x64_142
+  - first:
+      213: 7832793657930440829
+    second: SmallStar_64x64_143
+  - first:
+      213: 4376598357473108501
+    second: SmallStar_64x64_144
+  - first:
+      213: -2818408267266799125
+    second: SmallStar_64x64_145
+  - first:
+      213: -2079943728128625898
+    second: SmallStar_64x64_146
+  - first:
+      213: -2528515479249620462
+    second: SmallStar_64x64_147
+  - first:
+      213: 1340280113530547604
+    second: SmallStar_64x64_148
+  - first:
+      213: -7238034747423781781
+    second: SmallStar_64x64_149
+  - first:
+      213: -4231604530738311855
+    second: SmallStar_64x64_150
+  - first:
+      213: 3887634036991835662
+    second: SmallStar_64x64_151
+  - first:
+      213: 5947044458521775433
+    second: SmallStar_64x64_152
+  - first:
+      213: 3392888294735665003
+    second: SmallStar_64x64_153
+  - first:
+      213: -3718618020728799890
+    second: SmallStar_64x64_154
+  - first:
+      213: -742074235019778549
+    second: SmallStar_64x64_155
+  - first:
+      213: -7508856435021096309
+    second: SmallStar_64x64_156
+  - first:
+      213: 6701775279671019641
+    second: SmallStar_64x64_157
+  - first:
+      213: 9212380059692143563
+    second: SmallStar_64x64_158
+  - first:
+      213: -3806047254667125769
+    second: SmallStar_64x64_159
+  - first:
+      213: 290589749136768601
+    second: SmallStar_64x64_160
+  - first:
+      213: 5657346048023019311
+    second: SmallStar_64x64_161
+  - first:
+      213: -2041155383887300654
+    second: SmallStar_64x64_162
+  - first:
+      213: 2632399806795057064
+    second: SmallStar_64x64_163
+  - first:
+      213: -8439443832735159091
+    second: SmallStar_64x64_164
+  - first:
+      213: 7648609872092066144
+    second: SmallStar_64x64_165
+  - first:
+      213: -2028033716013542211
+    second: SmallStar_64x64_166
+  - first:
+      213: -6688383219834502492
+    second: SmallStar_64x64_167
+  - first:
+      213: 745588483567785521
+    second: SmallStar_64x64_168
+  - first:
+      213: -6885590841829133228
+    second: SmallStar_64x64_169
+  - first:
+      213: 9118686147274043851
+    second: SmallStar_64x64_170
+  - first:
+      213: -1717399369668351725
+    second: SmallStar_64x64_171
+  - first:
+      213: -5638454794377131794
+    second: SmallStar_64x64_172
+  - first:
+      213: 1903330146286428131
+    second: SmallStar_64x64_173
+  - first:
+      213: 5230795319130077125
+    second: SmallStar_64x64_174
+  - first:
+      213: 2596362639974697423
+    second: SmallStar_64x64_175
+  - first:
+      213: 916849472841260697
+    second: SmallStar_64x64_176
+  - first:
+      213: -7170253482467180439
+    second: SmallStar_64x64_177
+  - first:
+      213: -7897913842757238569
+    second: SmallStar_64x64_178
+  - first:
+      213: 9186348035461716516
+    second: SmallStar_64x64_179
+  - first:
+      213: -7811688685645841644
+    second: SmallStar_64x64_180
+  - first:
+      213: 8914818594318655815
+    second: SmallStar_64x64_181
+  - first:
+      213: -406197741156162801
+    second: SmallStar_64x64_182
+  - first:
+      213: 7358596939557525128
+    second: SmallStar_64x64_183
+  - first:
+      213: 430851810069239834
+    second: SmallStar_64x64_184
+  - first:
+      213: 2112713802555600078
+    second: SmallStar_64x64_185
+  - first:
+      213: 9172808476084007850
+    second: SmallStar_64x64_186
+  - first:
+      213: 2449648246052793546
+    second: SmallStar_64x64_187
+  - first:
+      213: 2066089012287530193
+    second: SmallStar_64x64_188
+  - first:
+      213: -763379894105071967
+    second: SmallStar_64x64_189
+  - first:
+      213: -443346932017680463
+    second: SmallStar_64x64_190
+  - first:
+      213: -5991128433060466464
+    second: SmallStar_64x64_191
+  - first:
+      213: -5006498655175630545
+    second: SmallStar_64x64_192
+  - first:
+      213: -8499368582581915412
+    second: SmallStar_64x64_193
+  - first:
+      213: -8545220796685078687
+    second: SmallStar_64x64_194
+  - first:
+      213: 3859333086174730955
+    second: SmallStar_64x64_195
+  - first:
+      213: -823961640337048288
+    second: SmallStar_64x64_196
+  - first:
+      213: -8761747762952249457
+    second: SmallStar_64x64_197
+  - first:
+      213: 970618256020373076
+    second: SmallStar_64x64_198
+  - first:
+      213: 6191944017203484427
+    second: SmallStar_64x64_199
+  - first:
+      213: 7425706814665883524
+    second: SmallStar_64x64_200
+  - first:
+      213: -7351248568569606352
+    second: SmallStar_64x64_201
+  - first:
+      213: -1606762668338741221
+    second: SmallStar_64x64_202
+  - first:
+      213: 2325936713116861215
+    second: SmallStar_64x64_203
+  - first:
+      213: 1889245012708995660
+    second: SmallStar_64x64_204
+  - first:
+      213: 1742693723370217556
+    second: SmallStar_64x64_205
+  - first:
+      213: 4761164783657619765
+    second: SmallStar_64x64_206
+  - first:
+      213: 6597886890370136252
+    second: SmallStar_64x64_207
+  - first:
+      213: 649412568073272914
+    second: SmallStar_64x64_208
+  - first:
+      213: 8891501414601763171
+    second: SmallStar_64x64_209
+  - first:
+      213: 6389646770784375994
+    second: SmallStar_64x64_210
+  - first:
+      213: 5730449499457030290
+    second: SmallStar_64x64_211
+  - first:
+      213: -5285997694541268792
+    second: SmallStar_64x64_212
+  - first:
+      213: 2131136382263555828
+    second: SmallStar_64x64_213
+  - first:
+      213: 5313422731547569806
+    second: SmallStar_64x64_214
+  - first:
+      213: -6636450457115880478
+    second: SmallStar_64x64_215
+  - first:
+      213: 363283365413995703
+    second: SmallStar_64x64_216
+  - first:
+      213: 4246069664986250553
+    second: SmallStar_64x64_217
+  - first:
+      213: 2135009966308302243
+    second: SmallStar_64x64_218
+  - first:
+      213: 7113512676957936304
+    second: SmallStar_64x64_219
+  - first:
+      213: 8009953784019142437
+    second: SmallStar_64x64_220
+  - first:
+      213: 8965321540780305258
+    second: SmallStar_64x64_221
+  - first:
+      213: -8140341782813151962
+    second: SmallStar_64x64_222
+  - first:
+      213: -8246400519736938372
+    second: SmallStar_64x64_223
+  - first:
+      213: -3244910207296589787
+    second: SmallStar_64x64_224
+  - first:
+      213: -1802152719635282750
+    second: SmallStar_64x64_225
+  - first:
+      213: -3148960871366152532
+    second: SmallStar_64x64_226
+  - first:
+      213: -2173084433315897960
+    second: SmallStar_64x64_227
+  - first:
+      213: 3169185239057675300
+    second: SmallStar_64x64_228
+  - first:
+      213: -88147891528819328
+    second: SmallStar_64x64_229
+  - first:
+      213: 4994961734782429922
+    second: SmallStar_64x64_230
+  - first:
+      213: 6534147090591508210
+    second: SmallStar_64x64_231
+  - first:
+      213: -1610808102633466442
+    second: SmallStar_64x64_232
+  - first:
+      213: -718588456225789467
+    second: SmallStar_64x64_233
+  - first:
+      213: -2753623071386806220
+    second: SmallStar_64x64_234
+  - first:
+      213: 1330993970554725826
+    second: SmallStar_64x64_235
+  - first:
+      213: 7671827737826416100
+    second: SmallStar_64x64_236
+  - first:
+      213: -8326052370220663246
+    second: SmallStar_64x64_237
+  - first:
+      213: -604169312498889044
+    second: SmallStar_64x64_238
+  - first:
+      213: 4007033983646974855
+    second: SmallStar_64x64_239
+  - first:
+      213: 800685332898481067
+    second: SmallStar_64x64_0
+  - first:
+      213: -3801388852187803070
+    second: SmallStar_64x64_1
+  - first:
+      213: -1562847615851384716
+    second: SmallStar_64x64_2
+  - first:
+      213: 4293178942790378157
+    second: SmallStar_64x64_3
+  - first:
+      213: -2296388385944173850
+    second: SmallStar_64x64_4
+  - first:
+      213: 7367705119675873730
+    second: SmallStar_64x64_5
+  - first:
+      213: 1130369003279381711
+    second: SmallStar_64x64_6
+  - first:
+      213: -2918357336922841722
+    second: SmallStar_64x64_7
+  - first:
+      213: -601522956603121732
+    second: SmallStar_64x64_8
+  - first:
+      213: 1614606126147594202
+    second: SmallStar_64x64_9
+  - first:
+      213: 7693183144804328291
+    second: SmallStar_64x64_10
+  - first:
+      213: 8993501682610721193
+    second: SmallStar_64x64_11
+  - first:
+      213: -3793310562199312268
+    second: SmallStar_64x64_12
+  - first:
+      213: 8513269936661415192
+    second: SmallStar_64x64_13
+  - first:
+      213: -2252758014617163504
+    second: SmallStar_64x64_14
+  - first:
+      213: -5402163403046745186
+    second: SmallStar_64x64_15
+  - first:
+      213: 3622078573143709498
+    second: SmallStar_64x64_16
+  - first:
+      213: -6621662384563081468
+    second: SmallStar_64x64_17
+  - first:
+      213: 6258663484597995371
+    second: SmallStar_64x64_18
+  - first:
+      213: 3814009651396056323
+    second: SmallStar_64x64_19
+  - first:
+      213: 4321508552875565855
+    second: SmallStar_64x64_20
+  - first:
+      213: -7527647072644554244
+    second: SmallStar_64x64_21
+  - first:
+      213: 5674807851565500405
+    second: SmallStar_64x64_22
+  - first:
+      213: -4890472623153190092
+    second: SmallStar_64x64_23
+  - first:
+      213: -4612580062586971982
+    second: SmallStar_64x64_24
+  - first:
+      213: 8877067146135186564
+    second: SmallStar_64x64_25
+  - first:
+      213: 3700239209138617949
+    second: SmallStar_64x64_26
+  - first:
+      213: 2674579487759449895
+    second: SmallStar_64x64_27
+  - first:
+      213: -6639494127217416685
+    second: SmallStar_64x64_28
+  - first:
+      213: 5095288383012822047
+    second: SmallStar_64x64_29
+  - first:
+      213: 7826578347657753703
+    second: SmallStar_64x64_30
+  - first:
+      213: 5704509263374346148
+    second: SmallStar_64x64_31
+  - first:
+      213: -7552978440669734302
+    second: SmallStar_64x64_32
+  - first:
+      213: -5990879511590325306
+    second: SmallStar_64x64_33
+  - first:
+      213: 2298035693668937551
+    second: SmallStar_64x64_34
+  - first:
+      213: -2489540187037126715
+    second: SmallStar_64x64_35
+  - first:
+      213: -359363747518511691
+    second: SmallStar_64x64_36
+  - first:
+      213: -8013566720052666882
+    second: SmallStar_64x64_37
+  - first:
+      213: 7655845191947161201
+    second: SmallStar_64x64_38
+  - first:
+      213: 3810987294164330902
+    second: SmallStar_64x64_39
+  - first:
+      213: -3646752513069235042
+    second: SmallStar_64x64_40
+  - first:
+      213: -1923079008351013729
+    second: SmallStar_64x64_41
+  - first:
+      213: 4647837941101210923
+    second: SmallStar_64x64_42
+  - first:
+      213: 1496933457907856904
+    second: SmallStar_64x64_43
+  - first:
+      213: -9148719601915470189
+    second: SmallStar_64x64_44
+  - first:
+      213: -1874410030081777240
+    second: SmallStar_64x64_45
+  - first:
+      213: 7634542065225703542
+    second: SmallStar_64x64_46
+  - first:
+      213: -5089971700652698847
+    second: SmallStar_64x64_47
+  - first:
+      213: 404769881426353306
+    second: SmallStar_64x64_48
+  - first:
+      213: -2632076832248144500
+    second: SmallStar_64x64_49
+  - first:
+      213: -2787237324987906995
+    second: SmallStar_64x64_50
+  - first:
+      213: -6954609043398555887
+    second: SmallStar_64x64_51
+  - first:
+      213: -3897955999725887687
+    second: SmallStar_64x64_52
+  - first:
+      213: 1547465325330272401
+    second: SmallStar_64x64_53
+  - first:
+      213: -8705866001089229629
+    second: SmallStar_64x64_54
+  - first:
+      213: 9099581737460093816
+    second: SmallStar_64x64_55
+  - first:
+      213: 3543563106550511723
+    second: SmallStar_64x64_56
+  - first:
+      213: 8612213000193898788
+    second: SmallStar_64x64_57
+  - first:
+      213: 94171760631568736
+    second: SmallStar_64x64_58
+  - first:
+      213: -6486008380614182480
+    second: SmallStar_64x64_59
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +932,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +941,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +973,1281 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SmallStar_64x64_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3874c611b9c1b00800000000000000
+      internalID: 800685332898481067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2425734caf0ce3bc0800000000000000
+      internalID: -3801388852187803070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470bc1baf56af4ae0800000000000000
+      internalID: -1562847615851384716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da22532908f649b30800000000000000
+      internalID: 4293178942790378157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e207750ee69120e0800000000000000
+      internalID: -2296388385944173850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c97b1445c85f3660800000000000000
+      internalID: 7367705119675873730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc474999e90efaf00800000000000000
+      internalID: 1130369003279381711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d1f05d679ef77d0800000000000000
+      internalID: -2918357336922841722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf9d67de06f6a7f0800000000000000
+      internalID: -601522956603121732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7623997bb386610800000000000000
+      internalID: 1614606126147594202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363a51a5f4da3ca60800000000000000
+      internalID: 7693183144804328291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1d3e671265fcc70800000000000000
+      internalID: 8993501682610721193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4786f5934247b5bc0800000000000000
+      internalID: -3793310562199312268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81547b3f6e5352670800000000000000
+      internalID: 8513269936661415192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01964d575889cb0e0800000000000000
+      internalID: -2252758014617163504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b88ceb109a705b0800000000000000
+      internalID: -5402163403046745186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37d8cc8545344230800000000000000
+      internalID: 3622078573143709498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f2d81f4212b14a0800000000000000
+      internalID: -6621662384563081468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_18
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b670c28874d3bd650800000000000000
+      internalID: 6258663484597995371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_19
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3059f5902951ee430800000000000000
+      internalID: 3814009651396056323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13e5fbe12519fb30800000000000000
+      internalID: 4321508552875565855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_21
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf12380eedc688790800000000000000
+      internalID: -7527647072644554244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_22
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7c821bca7f0ce40800000000000000
+      internalID: 5674807851565500405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_23
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b6e216f0d812cb0800000000000000
+      internalID: -4890472623153190092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8547f1fd2dcffb0800000000000000
+      internalID: -4612580062586971982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_25
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cada4698da13b70800000000000000
+      internalID: 8877067146135186564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_26
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5efdacb4f3e95330800000000000000
+      internalID: 3700239209138617949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_27
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fb273afd30e1520800000000000000
+      internalID: 2674579487759449895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_28
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316e9e2d447cbd3a0800000000000000
+      internalID: -6639494127217416685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_29
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c57a1d9c916b640800000000000000
+      internalID: 5095288383012822047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_30
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76477ea4a879d9c60800000000000000
+      internalID: 7826578347657753703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_31
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a76a5583fc7a2f40800000000000000
+      internalID: 5704509263374346148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_32
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a52b7202e6e2790800000000000000
+      internalID: -7552978440669734302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_33
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c33e7343de1cdca0800000000000000
+      internalID: -5990879511590325306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_34
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f2e42b94344ef10800000000000000
+      internalID: 2298035693668937551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_35
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cfa799d360637dd0800000000000000
+      internalID: -2489540187037126715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_36
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5810c5398430bf0800000000000000
+      internalID: -359363747518511691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_37
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd5e5b96871ac090800000000000000
+      internalID: -8013566720052666882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_38
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e8461c3a60f3a60800000000000000
+      internalID: 7655845191947161201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_39
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6992138a0c853e430800000000000000
+      internalID: 3810987294164330902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_40
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94ceb229e1246dc0800000000000000
+      internalID: -3646752513069235042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_41
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f943a30b4d9df45e0800000000000000
+      internalID: -1923079008351013729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_42
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2dabec6bff608040800000000000000
+      internalID: 4647837941101210923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_43
+      rect:
+        serializedVersion: 2
+        x: 2752
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806bef28c0d26c410800000000000000
+      internalID: 1496933457907856904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_44
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39edc2a7ef7390180800000000000000
+      internalID: -9148719601915470189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_45
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1eb893202ccf5e0800000000000000
+      internalID: -1874410030081777240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_46
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6702e8c0f8753f960800000000000000
+      internalID: 7634542065225703542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_47
+      rect:
+        serializedVersion: 2
+        x: 3008
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1231ec1c4b9cc59b0800000000000000
+      internalID: -5089971700652698847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_48
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cd13600180e9500800000000000000
+      internalID: 404769881426353306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_49
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d5050011cf87bd0800000000000000
+      internalID: -2632076832248144500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_50
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44c26b9b6eb159d0800000000000000
+      internalID: -2787237324987906995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_51
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11782801ce34c7f90800000000000000
+      internalID: -6954609043398555887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_52
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f5c36abada7e9c0800000000000000
+      internalID: -3897955999725887687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_53
+      rect:
+        serializedVersion: 2
+        x: 3392
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1909b8ab383b97510800000000000000
+      internalID: 1547465325330272401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_54
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc0de66ffc8e2780800000000000000
+      internalID: -8705866001089229629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_55
+      rect:
+        serializedVersion: 2
+        x: 3520
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873d0f9e065384e70800000000000000
+      internalID: 9099581737460093816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_56
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b687f1deed34d2130800000000000000
+      internalID: 3543563106550511723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_57
+      rect:
+        serializedVersion: 2
+        x: 3648
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429fe8e181ab48770800000000000000
+      internalID: 8612213000193898788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_58
+      rect:
+        serializedVersion: 2
+        x: 3712
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0695154a7b09e4100800000000000000
+      internalID: 94171760631568736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallStar_64x64_59
+      rect:
+        serializedVersion: 2
+        x: 3776
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9f84ffdb11df5a0800000000000000
+      internalID: -6486008380614182480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
