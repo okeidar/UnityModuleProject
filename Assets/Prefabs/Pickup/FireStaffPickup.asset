@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbda7ee32e4ca54b992f02c02278475, type: 3}
   m_Name: FireStaffPickup
   m_EditorClassIdentifier: 
-  grantedObjectPrefab: {fileID: 216231105668691001, guid: f097142346c56b544b368b9c3d9553d5, type: 3}
-  Icon: {fileID: 21300000, guid: 958065e17592f2345949834c1c9cc039, type: 3}
+  grantedObjectPrefab: {fileID: 216231105668691001, guid: 0150df2769a036a4999aa3eba12b963f, type: 3}
+  Icon: {fileID: 3211469460930242951, guid: 082f1f9a55a4988469aa1dc9b9f216fb, type: 3}

@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
 
     [SerializeField] float speed = 35;
-    [SerializeField] int damage = 25;
+    [SerializeField] protected int damage = 25;
     [SerializeField] float lifetimeSeconds = 3;
 
 
@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
 
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         var healthComponent = collision.gameObject.GetComponent<HealthObject>();
         if (healthComponent)

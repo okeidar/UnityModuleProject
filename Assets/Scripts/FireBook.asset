@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c83e1cd45f9ac41a991ce1341360b3, type: 3}
+  m_Name: FireBook
+  m_EditorClassIdentifier: 
+  shouldDestroyOnPickup: 1
+  Icon: {fileID: 3211469460930242951, guid: 082f1f9a55a4988469aa1dc9b9f216fb, type: 3}
+  bulletPrefab: {fileID: 1689142726591719894, guid: e1ea9f0fbce300c419db2a558de8a5b9, type: 3}
+  ammo: 50

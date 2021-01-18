@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
         var spawnPos = RandomPointOnSphere();
         var nodeInfo = AstarPath.active.GetNearest(spawnPos);
         GraphNode node = nodeInfo.node;
-        var nodeDiestance = ((Vector2)nodeInfo.position - spawnPos).magnitude;
+        var nodeDiestance = ((Vector2)nodeInfo.position - spawnPos).magnitude;  
         if (node.Walkable && nodeDiestance <= _distanceAllowed)
         {
             Instantiate(enemyToSpawn, spawnPos, Quaternion.identity).GetComponent<EnemyAI>().target = _target.transform;//TODO: dont kill me, ill fix this
