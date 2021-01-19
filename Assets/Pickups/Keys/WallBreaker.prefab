@@ -113,7 +113,7 @@ MonoBehaviour:
   grantedObect: {fileID: 11400000, guid: 5d518aedf2924bc4fb0c358a19d56c5e, type: 2}
   ignoredLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   IsPreview: 0
   IsDeployable: 0
 --- !u!61 &1170189184393999418

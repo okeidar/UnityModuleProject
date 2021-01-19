@@ -15,14 +15,21 @@ public class Wall : MonoBehaviour
         if(l)
         {
             m_l = l;
-            m_Collider.isTrigger = false;
+            m_l.OnDeployed += M_l_OnDeployed;
         }
     }
+
+    private void M_l_OnDeployed(GameObject obj)
+    {
+        m_Collider.isTrigger = true;
+    }
+
     private void OnTriggerExit2D(Collider2D other) {
         var l = other.gameObject.GetComponent<Scannable>();
         if(l && m_l == l)
         {
-            m_Collider.isTrigger = true;
+            m_l.OnDeployed -= M_l_OnDeployed;
+            m_l = null;
         }
     }
 }
