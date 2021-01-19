@@ -16,6 +16,12 @@ public class Wall : MonoBehaviour
         {
             m_l = l;
             m_l.OnDeployed += M_l_OnDeployed;
+            return;
+        }
+        var player = other.gameObject.GetComponent<PlayerController>();
+        if(player && !m_l)
+        {
+            m_Collider.isTrigger = false;
         }
     }
 

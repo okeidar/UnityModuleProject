@@ -56,6 +56,7 @@ public class Spawner : MonoBehaviour
         if (enemyToSpawn == null)
         {
             Invoke("SpawnHandler", 0.1f);
+            return;
         }
 
         var spawnPos = RandomPointOnSphere();

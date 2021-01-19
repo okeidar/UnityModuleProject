@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject basicBullet;
     [SerializeField] private Scanner m_Scanner;
     [SerializeField] private HealthObject m_Health;
-
+    
+    private Animator m_Animator;
     private Rigidbody2D m_controlledBody;
     private Vector2 m_movementInput;
     private Vector2 m_mouseLocation;
@@ -20,10 +21,13 @@ public class PlayerController : MonoBehaviour
     private bool m_isDeployButtonHold = false;
     Weapon weapon;
     private Pickable m_objectInHand;
+    private Quaternion m_LookRotation;
+
     private int ammo = 0; //TODO: where to handle?
     // Start is called before the first frame update
     void Start()
     {
+        m_Animator = GetComponentInChildren<Animator>();
         m_controlledBody = GetComponent<Rigidbody2D>();
         UIManager.Instance.SetLife(m_Health.CurrentHealth);
     }
@@ -36,6 +40,9 @@ public class PlayerController : MonoBehaviour
         Shoot(m_isShootButtonPressed);
         Scan(m_isScanButtonHold, m_isScanButtonRelease);
         DeployScan(m_isDeployButtonPressed, m_isDeployButtonReleased, m_isDeployButtonHold);
+        m_Animator.SetFloat("VelocityY", m_movementInput.y);
+        m_Animator.SetFloat("VelocityX", m_movementInput.x);
+
     }
     private void FixedUpdate()
     {
@@ -64,9 +71,10 @@ public class PlayerController : MonoBehaviour
     void RotatePlayer(Vector2 direction)//TODO:should be in a movement interface
     {
         Vector3 lookAt = direction - m_controlledBody.position;
-        float targetAngle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90f;
-
-        m_controlledBody.MoveRotation(targetAngle);
+        var Angle = Mathf.Atan2(lookAt.y, lookAt.x) * Mathf.Rad2Deg - 90f;
+        m_LookRotation = Quaternion.AngleAxis(Angle, Vector3.forward);
+        m_Scanner.transform.rotation= m_LookRotation;
+        //m_controlledBody.MoveRotation(targetAngle);
     }
 
     void Shoot(bool isShootButtonPressed) // TODO: should be in shooter class
@@ -75,18 +83,18 @@ public class PlayerController : MonoBehaviour
         {
             if (weapon == null)
             {
-                Instantiate(basicBullet, m_controlledBody.position, transform.rotation);
+                Instantiate(basicBullet, m_controlledBody.position, m_LookRotation);
             }
             else
             {
-                var bullet = Instantiate(weapon.bulletPrefab, m_controlledBody.position, transform.rotation);
+                var bullet = Instantiate(weapon.bulletPrefab, m_controlledBody.position, m_LookRotation);
 
                 var splitShot = bullet.GetComponent<SplitShotProjectile>();
                 if (splitShot)
                 {
                     foreach (var angle in splitShot._angles)
                     {
-                        var rotation = transform.rotation * Quaternion.Euler(0f, 0f, angle);
+                        var rotation = m_LookRotation * Quaternion.Euler(0f, 0f, angle);
 
                         Instantiate(weapon.bulletPrefab, m_controlledBody.position, rotation);
                     }

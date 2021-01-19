@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WallBreakerPermenant
   m_EditorClassIdentifier: 
   shouldDestroyOnPickup: 0
-  Icon: {fileID: -1145017248461454, guid: 082f1f9a55a4988469aa1dc9b9f216fb, type: 3}
+  Icon: {fileID: 21300000, guid: 8f627abda741b5f4981f5866e570670d, type: 3}
   KeyId: 45

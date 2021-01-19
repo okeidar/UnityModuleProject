@@ -25,7 +25,7 @@ public class Scanner : MonoBehaviour
     private void Start()
     {
         m_Collider = gameObject.GetComponent<Collider2D>();
-        m_SR = gameObject.GetComponent<SpriteRenderer>();
+        m_SR = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
     private void OnTriggerStay2D(Collider2D other) 
     {
