@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1032197263167644253}
   - component: {fileID: 9810123}
   - component: {fileID: 9810122}
-  m_Layer: 10
+  m_Layer: 21
   m_Name: AutoTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
