@@ -22,7 +22,7 @@ public class SplashProjectile : Projectile
             }
         }
 
-        Destroy(gameObject);
+        Die();
     }
     private void OnDrawGizmosSelected()
     {

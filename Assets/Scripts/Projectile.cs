@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -9,11 +10,19 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected int damage = 25;
     [SerializeField] float lifetimeSeconds = 3;
 
-
+    Animator m_animator;
+    Rigidbody2D rb;
+    Collider2D m_collider;
 
     private void Start()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        m_animator = GetComponent<Animator>();
+        if(!m_animator)
+        {
+            m_animator = GetComponentInChildren<Animator>();
+        }
+        m_collider = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>();
         if (!rb)
         {
             Debug.LogError("Projectile must have a rigid body!");
@@ -45,20 +54,24 @@ public class Projectile : MonoBehaviour
             var vaulnerability = healthComponent as HealthWithVulnerability;
             if (vaulnerability != null && !gameObject.name.StartsWith(vaulnerability._weaknessBulletPrefab.name))
             {
-                Destroy(gameObject);
+                Die();
                 return;
             }
             healthComponent.Damage(damage);
         }
-        Destroy(gameObject);
-        // TODO do we want the perview object to block the projectile?
-        /*
-        var scannable = collision.gameObject?.GetComponent<Scannable>();
-        if(!scannable || !scannable.IsPreview)
-        {
-            Destroy(gameObject);
-        }
-        */
+        Die();
 
+    }
+    protected virtual void Die()
+    {
+        Destroy(rb);
+        Destroy(m_collider);
+        float delay = 0f;
+        if(m_animator && m_animator.parameters.Any(m=>m.name=="Destroy"))
+        {
+            m_animator.SetBool("Destroy", true);
+            delay = m_animator.GetCurrentAnimatorStateInfo(0).length;
+        }
+        Destroy(gameObject, delay);
     }
 }

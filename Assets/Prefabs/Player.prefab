@@ -182,8 +182,8 @@ MonoBehaviour:
   m_MaxDeployDistance: 5
   m_ShouldDeployOnMouse: 1
   ScanTime: 0.5
-  DeployTime: 0.5
-  DeployChargeTime: 0.5
+  DeployTime: 0.3
+  DeployChargeTime: 0
   recalculateLayerMask:
     serializedVersion: 2
     m_Bits: 8192
