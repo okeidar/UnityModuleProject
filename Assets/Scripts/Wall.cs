@@ -16,15 +16,9 @@ public class Wall : MonoBehaviour
         {
             m_l = l;
             m_l.OnDeployed += M_l_OnDeployed;
-            return;
-        }
-        var player = other.gameObject.GetComponent<PlayerController>();
-        if(player && !m_l)
-        {
-            m_Collider.isTrigger = false;
         }
     }
-
+    
     private void M_l_OnDeployed(GameObject obj)
     {
         m_Collider.isTrigger = true;
@@ -36,6 +30,12 @@ public class Wall : MonoBehaviour
         {
             m_l.OnDeployed -= M_l_OnDeployed;
             m_l = null;
+            return;
+        }
+        var player = other.gameObject.GetComponent<PlayerController>();
+        if(player && !m_l)
+        {
+            m_Collider.isTrigger = false;
         }
     }
 }
