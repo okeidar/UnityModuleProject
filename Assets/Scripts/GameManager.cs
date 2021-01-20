@@ -29,11 +29,13 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         m_CurrentLevel++;
-        if(m_CurrentLevel <= LastLevel)
+        if(m_CurrentLevel >= LastLevel)
         {
-            SceneManager.LoadScene(m_CurrentLevel);
+            m_CurrentLevel = 0;
         }
+        SceneManager.LoadScene(m_CurrentLevel);
     }
+
     public void OpenMenu()
     {
 
