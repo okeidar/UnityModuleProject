@@ -24,10 +24,13 @@ public class SplashProjectile : Projectile
 
         Die();
     }
+
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.yellow;
         Handles.DrawWireDisc(transform.position, Vector3.forward, _radius);
     }
+#endif
 
 }

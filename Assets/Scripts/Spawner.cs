@@ -89,7 +89,7 @@ public class Spawner : MonoBehaviour
 
         return spawnPoint;
     }
-
+#if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
         var pos = transform.position;
@@ -103,5 +103,6 @@ public class Spawner : MonoBehaviour
         Handles.color = Color.red;
         Handles.DrawWireDisc(pos, Vector3.forward, _radiusMax);
     }
+#endif
 
 }
